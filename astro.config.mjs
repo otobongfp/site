@@ -9,7 +9,7 @@ export default defineConfig({
   //     react(),
   //     tailwind(),
   //   ],
-  //site: `https://www.christophermarkus.com`,
+  site: `https://otobongfp.github.io/site/`,
   output: "static",
   outDir: "./docs",
   build: {
