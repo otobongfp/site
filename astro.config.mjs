@@ -1,5 +1,7 @@
 import { defineConfig } from "astro/config";
 
+import vercel from "@astrojs/vercel/serverless";
+
 // https://astro.build/config
 export default defineConfig({
   //   integrations: [
@@ -13,6 +15,7 @@ export default defineConfig({
   output: "static",
   outDir: "./docs",
   build: {
-    assets: "astro",
+    assets: "astro"
   },
+  adapter: vercel()
 });
