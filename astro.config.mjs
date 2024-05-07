@@ -12,10 +12,10 @@ export default defineConfig({
   //     tailwind(),
   //   ],
   site: `https://otobongfp.github.io/site/`,
-  output: "static",
+  output: "server",
   outDir: "./docs",
   build: {
-    assets: "astro"
+    assets: "astro",
   },
-  adapter: vercel()
+  adapter: vercel(),
 });
