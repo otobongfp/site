@@ -1,8 +1,8 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, g as renderComponent, m as maybeRenderHead } from '../astro_CKGtrHmX.mjs';
 import 'kleur/colors';
-import { g as getCollection, $ as $$ContactCTA } from './__AM4t2Yjc.mjs';
+import { g as getCollection, $ as $$ContactCTA } from './__BxoIvEQZ.mjs';
 import { b as $$Hero, a as $$BaseLayout } from './404_C8f0_6CA.mjs';
-import { $ as $$Grid, a as $$PortfolioPreview } from './index_xFoS9P6V.mjs';
+import { $ as $$Grid, a as $$PortfolioPreview } from './index_D1F2rnl6.mjs';
 
 const $$Astro = createAstro("https://otobongfp.github.io/site/");
 const $$Work = createComponent(async ($$result, $$props, $$slots) => {

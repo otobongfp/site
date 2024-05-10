@@ -1,7 +1,7 @@
 import { c as createAstro, d as createComponent, r as renderTemplate, g as renderComponent, m as maybeRenderHead } from '../astro_CKGtrHmX.mjs';
 import 'kleur/colors';
 import { b as $$Hero, a as $$BaseLayout } from './404_C8f0_6CA.mjs';
-import { $ as $$ContactCTA } from './__AM4t2Yjc.mjs';
+import { $ as $$ContactCTA } from './__BxoIvEQZ.mjs';
 /* empty css                          */
 
 const $$Astro = createAstro("https://otobongfp.github.io/site/");

@@ -207,7 +207,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"work":{"type":"content","entries":{"bloom-box":"/src/content/work/bloom-box.md","markdown-mystery-tour":"/src/content/work/markdown-mystery-tour.md","nested/duvet-genius":"/src/content/work/nested/duvet-genius.md","h20":"/src/content/work/h20.md"}}};
+lookupMap = {"work":{"type":"content","entries":{"bloom-box":"/src/content/work/bloom-box.md","markdown-mystery-tour":"/src/content/work/markdown-mystery-tour.md","h20":"/src/content/work/h20.md","nested/duvet-genius":"/src/content/work/nested/duvet-genius.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {
