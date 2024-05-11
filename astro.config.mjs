@@ -1,16 +1,9 @@
-import { defineConfig } from "astro/config";
+//UNCOMMENT TO RUN ON REMOTE SERVER e.g vercel
 
+import { defineConfig } from "astro/config";
 import vercel from "@astrojs/vercel/serverless";
 
-// https://astro.build/config
 export default defineConfig({
-  //   integrations: [
-  //     // Enable Preact to support Preact JSX components.
-  //     preact(),
-  //     // Enable React for the Algolia search component.
-  //     react(),
-  //     tailwind(),
-  //   ],
   site: `https://otobongfp.github.io/site/`,
   output: "server",
   outDir: "./docs",
@@ -19,6 +12,8 @@ export default defineConfig({
   },
   adapter: vercel(),
 });
+
+//UNCOMMENT TO RUN ON LOCAL
 
 // import { defineConfig } from "astro/config";
 
