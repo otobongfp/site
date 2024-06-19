@@ -1,17 +1,17 @@
 //UNCOMMENT TO RUN ON REMOTE SERVER e.g vercel
 
-import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
+// import { defineConfig } from "astro/config";
+// import vercel from "@astrojs/vercel/serverless";
 
-export default defineConfig({
-  site: `https://otobongfp.github.io/site/`,
-  output: "server",
-  outDir: "./docs",
-  build: {
-    assets: "astro",
-  },
-  adapter: vercel(),
-});
+// export default defineConfig({
+//   site: `https://otobongfp.github.io/site/`,
+//   output: "server",
+//   outDir: "./docs",
+//   build: {
+//     assets: "astro",
+//   },
+//   adapter: vercel(),
+// });
 
 //UNCOMMENT TO RUN ON LOCAL
 
@@ -19,3 +19,10 @@ export default defineConfig({
 
 // // https://astro.build/config
 // export default defineConfig({});
+
+//UNCOMMENT FOR GH-PAGES
+import { defineConfig } from "astro/config";
+
+export default defineConfig({
+  site: "https://otobongfp.github.io",
+});
