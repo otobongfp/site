@@ -20,11 +20,21 @@ const projects = (await getCollection('work')).sort(
 	<div class="stack gap-20">
 		<main class="wrapper stack gap-8">
 			<Hero
-				title="My Work"
+				title="Projects & Writings"
 				tagline="See my most recent projects below to get an idea of my past experience."
 				align="start"
 			/>
-			<Grid variant="offset">
+			<div>
+				<h4>Projects</h4>
+				<p>CLI Note taking app written in Rust <a target="_blank" href="https://github.com/otobongfp/Notes_App">here</a></p>
+				<p>LTO Blockchain's Private layer communication service <a target="_blank"  href="https://github.com/otobongfp/relay-service">here</a>[contribution]</p>
+				<p>Hangman game, written in haskell<a target="_blank"  href="https://github.com/otobongfp/hangman-game">here</a></p>
+			</div>
+			<div>
+				<h4>Articles & Papers</h4>
+				<p>Kings Landing <a href="lol">here</a></p>
+			</div>
+			<!-- <Grid variant="offset">
 				{
 					projects.map((project) => (
 						<li>
@@ -32,7 +42,7 @@ const projects = (await getCollection('work')).sort(
 						</li>
 					))
 				}
-			</Grid>
+			</Grid> -->
 		</main>
 		<ContactCTA />
 	</div>
