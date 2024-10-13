@@ -25,4 +25,5 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://otobongfp.github.io",
+  base: "/",
 });
