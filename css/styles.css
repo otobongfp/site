@@ -89,7 +89,7 @@ a:focus {
 }
 
 .article-title {
-  font-weight: bold;
+  font-style: italic;
 }
 
 .image-grid {
@@ -235,12 +235,14 @@ a:focus {
   padding: 0.6rem 1.2rem;
   background: transparent;
   border: 1px solid #7fffd4;
+  background-color: #7fffd4;
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
   max-width: 200px;
   width: 100%;
   box-sizing: border-box;
+  font-weight: bold;
 }
 
 .trigger-text {
@@ -250,7 +252,7 @@ a:focus {
 
 .trigger-icon {
   font-size: 1.2rem;
-  color: #7fffd4;
+  color: #000000;
   transition: transform 0.3s ease;
 }
 
