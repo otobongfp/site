@@ -3,12 +3,68 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Otobong Peter</title>
+    <title>Otobong Peter - Systems Design Researcher & Software Engineer</title>
+    <meta
+      name="description"
+      content="Systems design researcher and software engineer passionate about building scalable systems and sharing knowledge through writing. Currently pursuing MSc in Software Engineering."
+    />
+    <meta name="author" content="Otobong Peter" />
+    <link rel="canonical" href="https://otobongpeter.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://otobongpeter.com" />
+    <meta
+      property="og:title"
+      content="Otobong Peter - Systems Design Researcher & Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Systems design researcher and software engineer passionate about building scalable systems and sharing knowledge through writing."
+    />
+    <meta
+      property="og:image"
+      content="https://otobongpeter.com/assets/images/otobongpeter_profile.jpg"
+    />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://otobongpeter.com" />
+    <meta
+      property="twitter:title"
+      content="Otobong Peter - Systems Design Researcher & Software Engineer"
+    />
+    <meta
+      property="twitter:description"
+      content="Systems design researcher and software engineer passionate about building scalable systems and sharing knowledge through writing."
+    />
+    <meta
+      property="twitter:image"
+      content="https://otobongpeter.com/assets/images/otobongpeter_profile.jpg"
+    />
+
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/IBM-Plex-Mono/2.3.0/css/ibm-plex-mono.min.css"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Otobong Peter",
+        "url": "https://otobongpeter.com",
+        "description": "Systems design researcher and software engineer passionate about building scalable systems and sharing knowledge through writing.",
+        "image": "https://otobongpeter.com/assets/images/otobongpeter_profile.jpg",
+        "sameAs": [
+          "https://github.com/otobongfp",
+          "https://www.linkedin.com/in/otobongpeter",
+          "https://medium.com/@otobongpeter"
+        ]
+      }
+    </script>
   </head>
   <body>
     <div class="container">
@@ -27,7 +83,7 @@
           about turning ideas into real-world products. I also enjoy sharing
           insights through writing as I learn new concepts. In a parallel
           universe, you'll find me at the intersection of technology, finance,
-          and leadership.
+          and leadership. Christian.
         </p>
       </div>
       <div class="content">
@@ -51,6 +107,15 @@
           />
         </div> -->
       </div>
+
+      <!-- Projects Trigger -->
+      <div class="projects-trigger">
+        <span class="trigger-text">Explore Projects</span>
+        <span class="trigger-icon">↓</span>
+      </div>
+
+      <!-- Projects Container -->
+      <div id="projects-container"></div>
 
       <!-- Articles Section -->
       <div class="articles">
@@ -88,7 +153,7 @@
               class="article-link"
             >
               <span class="article-title">
-                My Experience Leading a Google Students’ Community
+                My Experience Leading a Google Students' Community
               </span>
               -
               <span>Sept, 2021</span>
@@ -110,11 +175,11 @@
             <img src="assets/icons/github.png" alt="GitHub" />
           </a>
           <a
-            href="https://x.com/OtobongFP"
+            href="https://www.linkedin.com/in/otobongfp"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img src="assets/icons/x.png" alt="Twitter" />
+            <img src="assets/icons/linkedin-logo.png" alt="LinkedIn" />
           </a>
           <a
             href="https://medium.com/@otobongpeter"
@@ -126,5 +191,6 @@
         </div>
       </div>
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
