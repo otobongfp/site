@@ -27,10 +27,7 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="https://x.com/OtobongFP.com" />
-    <meta
-      property="twitter:title"
-      content="Otobong Peter - Systems Craftsman"
-    />
+    <meta property="twitter:title" content="Otobong Peter" />
     <meta
       property="twitter:description"
       content="Software Engineer and Systems Craftsman."
@@ -40,8 +37,11 @@
       content="https://otobongpeter.com/assets/images/otobongpeter_profile.jpg"
     />
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/IBM-Plex-Mono/2.3.0/css/ibm-plex-mono.min.css"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Pixelify+Sans:wght@400..700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
@@ -60,6 +60,13 @@
           "https://www.linkedin.com/in/otobongfp",
           "https://medium.com/@otobongpeter"
         ]
+      }
+    </script>
+
+    <script>
+      // Check if user is coming from loading screen
+      if (!sessionStorage.getItem("loaded")) {
+        window.location.href = "loading.html";
       }
     </script>
   </head>
@@ -112,7 +119,7 @@
       </div>
 
       <!-- Projects Trigger -->
-      <div class="projects-trigger">
+      <div class="projects-trigger sound-button">
         <span class="trigger-text">Explore Projects</span>
         <span class="trigger-icon">↓</span>
       </div>
@@ -195,5 +202,6 @@
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/sounds.js"></script>
   </body>
 </html>

@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const html = await response.text();
           projectsContainer.innerHTML = html;
           projectsLoaded = true;
+          projectsContainer.classList.remove("hidden");
+          projectsContainer.scrollIntoView({ behavior: "smooth" });
         } catch (error) {
           console.error("Error loading projects:", error);
           return;

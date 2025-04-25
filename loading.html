@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loading...</title>
+    <style>
+      body {
+        background-color: #000;
+        color: #0f0;
+        font-family: "IBM Plex Mono", monospace;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .terminal {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .blink {
+        animation: blink 1s step-end infinite;
+      }
+
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .date {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        color: #0f0;
+      }
+
+      .enter-button {
+        margin-top: 2rem;
+        padding: 0.5rem 2rem;
+        background: transparent;
+        border: 2px solid #0f0;
+        color: #0f0;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .enter-button:hover {
+        background: #0f0;
+        color: #000;
+      }
+
+      .scanline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.1) 10%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        animation: scanline 6s linear infinite;
+        pointer-events: none;
+      }
+
+      @keyframes scanline {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100vh);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scanline"></div>
+    <div class="terminal">
+      <div>SYSTEM INITIALIZING<span class="blink">_</span></div>
+      <div class="date" id="currentDate"></div>
+      <button class="enter-button" onclick="playClickSound()">
+        ENTER SITE
+      </button>
+    </div>
+
+    <script>
+      // Set current date
+      const date = new Date();
+      document.getElementById("currentDate").textContent =
+        date.toLocaleDateString("en-US", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+
+      // Create audio context
+      const audioContext = new (window.AudioContext ||
+        window.webkitAudioContext)();
+
+      // Reusable sound function
+      function playButtonSound(frequency = 800, duration = 0.1, volume = 0.1) {
+        const oscillator = audioContext.createOscillator();
+        const gainNode = audioContext.createGain();
+
+        oscillator.type = "square";
+        oscillator.frequency.setValueAtTime(
+          frequency,
+          audioContext.currentTime
+        );
+        gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioContext.destination);
+
+        oscillator.start();
+
+        setTimeout(() => {
+          oscillator.stop();
+        }, duration * 1000);
+      }
+
+      function playClickSound() {
+        playButtonSound(); // Play the default sound
+        enterSite(); // Proceed with site entry
+      }
+
+      function enterSite() {
+        // Set flag to indicate site has been loaded
+        sessionStorage.setItem("loaded", "true");
+
+        // Add transition effect
+        document.body.style.opacity = "0";
+        setTimeout(() => {
+          window.location.href = "index.html";
+        }, 500);
+      }
+    </script>
+  </body>
+</html>
