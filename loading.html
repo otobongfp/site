@@ -22,6 +22,13 @@
       .terminal {
         text-align: center;
         padding: 2rem;
+        position: relative;
+      }
+
+      .typewriter {
+        min-height: 2em;
+        margin: 1rem 0;
+        font-size: 1.2rem;
       }
 
       .blink {
@@ -50,6 +57,11 @@
         font-size: 1rem;
         cursor: pointer;
         transition: all 0.3s ease;
+        opacity: 0;
+      }
+
+      .enter-button.visible {
+        opacity: 1;
       }
 
       .enter-button:hover {
@@ -81,16 +93,76 @@
           transform: translateY(100vh);
         }
       }
+
+      .glitch {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000;
+      }
+
+      .glitch-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        opacity: 0;
+      }
+
+      .glitch-line.red {
+        top: 30%;
+        background: #ff0000;
+      }
+
+      .glitch-line.yellow {
+        top: 50%;
+        background: #ffff00;
+      }
+
+      .glitch-line.green {
+        top: 70%;
+        background: #00ff00;
+      }
+
+      .glitch.active .glitch-line {
+        animation: flash 0.1s linear;
+      }
+
+      @keyframes flash {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .ascii-emoji {
+        font-family: monospace;
+      }
     </style>
   </head>
   <body>
     <div class="scanline"></div>
     <div class="terminal">
-      <div>SYSTEM INITIALIZING<span class="blink">_</span></div>
+      <div class="typewriter" id="typewriter"></div>
       <div class="date" id="currentDate"></div>
-      <button class="enter-button" onclick="playClickSound()">
+      <button class="enter-button sound-button" onclick="playClickSound()">
         ENTER SITE
       </button>
+    </div>
+
+    <!-- Glitch lines container -->
+    <div class="glitch">
+      <div class="glitch-line red"></div>
+      <div class="glitch-line yellow"></div>
+      <div class="glitch-line green"></div>
     </div>
 
     <script>
@@ -103,6 +175,65 @@
           month: "long",
           day: "numeric",
         });
+
+      // Typewriter effect
+      const messages = [
+        "Otobong Peter here.",
+        "Engineer. Builder.",
+        "No more waiting. ¯\\_(ツ)_/¯",
+      ];
+
+      const typewriter = document.getElementById("typewriter");
+      let messageIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 20;
+      let deletingSpeed = 30;
+      let pauseTime = 900;
+
+      function typeWriter() {
+        const currentMessage = messages[messageIndex];
+
+        if (isDeleting) {
+          typewriter.textContent = currentMessage.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = deletingSpeed;
+        } else {
+          typewriter.textContent = currentMessage.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100;
+        }
+
+        if (!isDeleting && charIndex === currentMessage.length) {
+          isDeleting = true;
+          typingSpeed = pauseTime;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          messageIndex = (messageIndex + 1) % messages.length;
+          if (messageIndex === 0) {
+            // After last message, show colored flash effect
+            document.querySelector(".glitch").classList.add("active");
+            setTimeout(() => {
+              document.querySelector(".glitch").classList.remove("active");
+              setTimeout(() => {
+                typewriter.innerHTML =
+                  "SYSTEM INITIALIZING<span class='blink'>_</span>";
+                document
+                  .querySelector(".enter-button")
+                  .classList.add("visible");
+              }, 100);
+            }, 100);
+            return;
+          }
+        }
+
+        setTimeout(typeWriter, typingSpeed);
+      }
+
+      // Start typewriter effect after a short delay
+      setTimeout(() => {
+        typeWriter();
+      }, 500);
 
       // Create audio context
       const audioContext = new (window.AudioContext ||
@@ -131,8 +262,8 @@
       }
 
       function playClickSound() {
-        playButtonSound(); // Play the default sound
-        enterSite(); // Proceed with site entry
+        playButtonSound();
+        enterSite();
       }
 
       function enterSite() {
