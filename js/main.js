@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     projectsTrigger.addEventListener("click", async () => {
       if (!projectsLoaded) {
         try {
-          const response = await fetch("projects.html");
+          const response = await fetch("pages/projects.html");
           const html = await response.text();
           projectsContainer.innerHTML = html;
           projectsLoaded = true;
