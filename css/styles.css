@@ -1,6 +1,30 @@
+/* Light mode */
+:root {
+  --bg-color: #f6f5ed;
+  --text-color: #484848;
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.05);
+  --highlight-bg: #7fffd4;
+  --highlight-text: #000;
+}
+
+/* Dark mode */
+.dark-mode {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --card-bg: #2d2d2d;
+  --card-shadow: rgba(0, 0, 0, 0.2);
+  --highlight-bg: #7fffd4;
+  --highlight-text: #000;
+}
+
+.exempt-mode {
+  color: #484848 !important;
+}
+
 body {
-  background-color: #f6f5ed;
-  color: #484848;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   font-family: "IBM Plex Mono", monospace;
   margin: 0;
   padding: 0;
@@ -11,6 +35,7 @@ body {
 .container {
   max-width: 900px;
   margin: 0 auto;
+  margin-top: 30px;
   padding: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -37,7 +62,7 @@ a:focus {
   font-size: 1.4rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
-  color: #484848;
+  color: var(--text-color);
   /* text-transform: uppercase; */
   letter-spacing: 1px;
   position: relative;
@@ -51,7 +76,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background: linear-gradient(90deg, #7fffd4, transparent);
+  background: linear-gradient(90deg, var(--highlight-bg), transparent);
 }
 
 @media (max-width: 600px) {
@@ -74,7 +99,7 @@ a:focus {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
 }
 
 .summary {
@@ -136,7 +161,7 @@ a:focus {
   height: 300px;
   object-fit: cover;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 6px var(--card-shadow);
   transition: transform 0.3s ease;
 }
 
@@ -183,10 +208,10 @@ a:focus {
 }
 
 .project-card {
-  background: #ffffff;
+  background: var(--card-bg);
   border-radius: 12px;
   padding: 1.25rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px var(--card-shadow);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -201,7 +226,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 4px;
-  background: linear-gradient(90deg, #7fffd4, #00bfff);
+  background: linear-gradient(90deg, var(--highlight-bg), #00bfff);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -209,7 +234,7 @@ a:focus {
 
 .project-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 15px var(--card-shadow);
 }
 
 .project-card:hover::before {
@@ -224,14 +249,14 @@ a:focus {
 .project-content h3 {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
-  color: #333;
+  color: var(--text-color);
   word-break: break-word;
 }
 
 .project-content p {
   font-size: 0.9rem;
   line-height: 1.5;
-  color: #666;
+  color: var(--text-color);
   margin-bottom: 1.25rem;
   word-break: break-word;
 }
@@ -266,8 +291,8 @@ a:focus {
   margin: 1.5rem auto;
   padding: 0.6rem 1.2rem;
   background: transparent;
-  border: 1px solid #7fffd4;
-  background-color: #7fffd4;
+  border: 1px solid var(--highlight-bg);
+  background-color: var(--highlight-bg);
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -279,12 +304,12 @@ a:focus {
 
 .trigger-text {
   font-size: 0.9rem;
-  color: #484848;
+  color: var(--text-color);
 }
 
 .trigger-icon {
   font-size: 1.2rem;
-  color: #000000;
+  color: var(--text-color);
   transition: transform 0.3s ease;
 }
 
@@ -357,8 +382,28 @@ a:focus {
 }
 
 .highlight {
-  background-color: #7fffd4; /* Aquamarine */
-  color: #000;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
   padding: 0.2em 0.3em;
   border-radius: 3px;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  background-color: var(--highlight-bg);
+  color: var(--highlight-text);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--highlight-text);
+  color: var(--highlight-bg);
 }

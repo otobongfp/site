@@ -95,10 +95,11 @@
       </div>
       <div class="content">
         <p class="justified">
-          In 2020, I had the priviledge of getting introduced to the blockchain
-          space with a focus on EVM chains and Cardano. In the 3yrs after that,
-          I helped train blockchain developers, organized events, wrote contents
-          for organizations across the globe and worked on different projects.
+          In 2020/21, I had the priviledge of getting introduced to the
+          blockchain space with a focus on EVM chains and Cardano. In the 3yrs
+          after that, I helped train blockchain developers, organized events,
+          wrote contents for organizations across the globe and worked on
+          different projects.
         </p>
 
         <p class="justified">
@@ -132,8 +133,8 @@
 
       <!-- Projects Trigger -->
       <div class="projects-trigger sound-button">
-        <span class="trigger-text">Explore Projects</span>
-        <span class="trigger-icon">↓</span>
+        <span class="trigger-text exempt-mode">Explore Projects</span>
+        <span class="trigger-icon exempt-mode">↓</span>
       </div>
 
       <!-- Projects Container -->
@@ -212,8 +213,20 @@
           </a>
         </div>
       </div>
+
+      <!-- Add dark mode toggle button -->
+      <button id="darkModeToggle" class="dark-mode-toggle sound-button">
+        Mode
+      </button>
     </div>
     <script src="js/main.js"></script>
     <script src="js/sounds.js"></script>
+    <script>
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          document.body.classList.toggle("dark-mode");
+        });
+    </script>
   </body>
 </html>
