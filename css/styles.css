@@ -171,14 +171,26 @@ a:focus {
 
 .social-links {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .social-links img {
   width: 28px;
   height: 28px;
+}
+
+.socials-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #f6f5ed;
+  max-width: 10rem;
+  border: none;
+  border-radius: 5px;
 }
 
 /* Projects Section */
