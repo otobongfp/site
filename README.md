@@ -1,6 +1,6 @@
 # My Site
 
-Otobong's Personal website
+Otobong Peter's Personal website
 
 ## License
 
