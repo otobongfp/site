@@ -171,14 +171,38 @@ a:focus {
 
 .social-links {
   display: flex;
-  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  margin-top: 1rem;
 }
 
-.social-links img {
-  width: 28px;
-  height: 28px;
+.social-link {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  text-decoration: none;
+  color: var(--text-color);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  transform: translateY(-2px);
+}
+
+.substack-link {
+  background-color: #ff6719;
+  border-color: #ff6719;
+  color: white;
+}
+
+.substack-link:hover {
+  background-color: #e55c17;
+  border-color: #e55c17;
+  color: white;
 }
 
 .socials-card {
