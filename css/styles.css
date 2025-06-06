@@ -11,7 +11,7 @@
 /* Dark mode */
 .dark-mode {
   --bg-color: #1a1a1a;
-  --text-color: #e0e0e0;
+  --text-color: #faf5f5;
   --card-bg: #2d2d2d;
   --card-shadow: rgba(0, 0, 0, 0.2);
   --highlight-bg: #7fffd4;
