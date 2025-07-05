@@ -52,6 +52,12 @@ a {
   text-decoration: none;
 }
 
+.pre-underline {
+  text-decoration: underline;
+  /* text-decoration-color: var(--highlight-bg); */
+  text-decoration-thickness: 2px;
+}
+
 a:hover,
 a:focus {
   text-decoration: underline;
