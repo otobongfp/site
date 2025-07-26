@@ -6,9 +6,7 @@
     <title>Otobong Peter - Systems Craftsman</title>
     <meta
       name="description"
-      content="Otobong Peter, experienced Software Engineer building scalable
-    systems across web, finance, blockchain, and cloud
-    technologies."
+      content="Otobong Peter - I made this website to share my journey in technology and my projects."
     />
     <meta name="author" content="Otobong Peter" />
     <link rel="canonical" href="https://otobongfp.com" />
@@ -20,7 +18,7 @@
     <meta property="og:title" content="Otobong Peter - Systems Craftsman" />
     <meta
       property="og:description"
-      content="Software engineer passionate about building scalable systems and sharing knowledge through writing."
+      content="Software Engineer and Systems Craftsman."
     />
     <meta
       property="og:image"
@@ -56,7 +54,7 @@
         "@type": "Person",
         "name": "Otobong Peter",
         "url": "https://otobongfp.com",
-        "description": "software, engineering, security, blockchains",
+        "description": "software, engineering, security, platforms",
         "image": "https://otobongfp.com/assets/images/Otobong_Peter.jpeg",
         "sameAs": [
           "https://github.com/otobongfp",
@@ -65,15 +63,241 @@
         ]
       }
     </script>
-
-    <script>
-      // Check if user is coming from loading screen
-      if (!sessionStorage.getItem("loaded")) {
-        window.location.href = "loading.html";
-      }
-    </script>
   </head>
   <body>
+    <!-- Loading Overlay (non-blocking) -->
+    <div id="loading-overlay">
+      <div class="scanline"></div>
+      <div class="terminal">
+        <div class="typewriter" id="typewriter"></div>
+        <div class="date" id="currentDate"></div>
+        <button class="enter-button sound-button" id="enterButton">
+          ENTER SITE
+        </button>
+      </div>
+      <div class="glitch">
+        <div class="glitch-line red"></div>
+        <div class="glitch-line yellow"></div>
+        <div class="glitch-line green"></div>
+      </div>
+    </div>
+    <style>
+      #loading-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #000;
+        color: #0f0;
+        font-family: "IBM Plex Mono", monospace;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        transition: opacity 0.5s;
+      }
+      #loading-overlay.hide {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #loading-overlay .scanline {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.1) 10%,
+          rgba(0, 0, 0, 0) 100%
+        );
+        animation: scanline 6s linear infinite;
+        pointer-events: none;
+      }
+      @keyframes scanline {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100vh);
+        }
+      }
+      #loading-overlay .terminal {
+        text-align: center;
+        padding: 2rem;
+        position: relative;
+      }
+      #loading-overlay .typewriter {
+        min-height: 2em;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+      }
+      #loading-overlay .blink {
+        animation: blink 1s step-end infinite;
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+      #loading-overlay .date {
+        margin: 1rem 0;
+        font-size: 0.9rem;
+        color: #0f0;
+      }
+      #loading-overlay .enter-button {
+        margin-top: 2rem;
+        padding: 0.5rem 2rem;
+        background: transparent;
+        border: 2px solid #0f0;
+        color: #0f0;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        opacity: 0;
+      }
+      #loading-overlay .enter-button.visible {
+        opacity: 1;
+      }
+      #loading-overlay .enter-button:hover {
+        background: #0f0;
+        color: #000;
+      }
+      #loading-overlay .glitch {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1000;
+      }
+      #loading-overlay .glitch-line {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 2px;
+        opacity: 0;
+      }
+      #loading-overlay .glitch-line.red {
+        top: 30%;
+        background: #ff0000;
+      }
+      #loading-overlay .glitch-line.yellow {
+        top: 50%;
+        background: #ffff00;
+      }
+      #loading-overlay .glitch-line.green {
+        top: 70%;
+        background: #00ff00;
+      }
+      #loading-overlay .glitch.active .glitch-line {
+        animation: flash 0.1s linear;
+      }
+      @keyframes flash {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+      @media (max-width: 600px) {
+        #loading-overlay .terminal {
+          padding: 1rem;
+        }
+        #loading-overlay .typewriter {
+          font-size: 1rem;
+        }
+      }
+    </style>
+    <script>
+      // Set current date
+      const date = new Date();
+      document.addEventListener("DOMContentLoaded", function () {
+        const dateElem = document.getElementById("currentDate");
+        if (dateElem) {
+          dateElem.textContent = date.toLocaleDateString("en-US", {
+            weekday: "long",
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+        }
+      });
+      // Typewriter effect
+      const messages = [
+        "Otobong Peter here.",
+        "Engineering. Systems. Security. AI",
+        "¯\\_(ツ)_/¯",
+      ];
+      let messageIndex = 0;
+      let charIndex = 0;
+      let isDeleting = false;
+      let typingSpeed = 20;
+      let deletingSpeed = 30;
+      let pauseTime = 900;
+      function typeWriter() {
+        const typewriter = document.getElementById("typewriter");
+        if (!typewriter) return;
+        const currentMessage = messages[messageIndex];
+        if (isDeleting) {
+          typewriter.textContent = currentMessage.substring(0, charIndex - 1);
+          charIndex--;
+          typingSpeed = deletingSpeed;
+        } else {
+          typewriter.textContent = currentMessage.substring(0, charIndex + 1);
+          charIndex++;
+          typingSpeed = 100;
+        }
+        if (!isDeleting && charIndex === currentMessage.length) {
+          isDeleting = true;
+          typingSpeed = pauseTime;
+        } else if (isDeleting && charIndex === 0) {
+          isDeleting = false;
+          messageIndex = (messageIndex + 1) % messages.length;
+          if (messageIndex === 0) {
+            // After last message, show colored flash effect
+            document
+              .querySelector("#loading-overlay .glitch")
+              .classList.add("active");
+            setTimeout(() => {
+              document
+                .querySelector("#loading-overlay .glitch")
+                .classList.remove("active");
+              setTimeout(() => {
+                typewriter.innerHTML =
+                  "SYSTEM INITIALIZING<span class='blink'>_</span>";
+                document.getElementById("enterButton").classList.add("visible");
+              }, 100);
+            }, 100);
+            return;
+          }
+        }
+        setTimeout(typeWriter, typingSpeed);
+      }
+      setTimeout(() => {
+        typeWriter();
+      }, 500);
+      // Hide overlay after 5 seconds
+      function hideOverlay() {
+        document.getElementById("loading-overlay").classList.add("hide");
+      }
+      document
+        .getElementById("enterButton")
+        .addEventListener("click", hideOverlay);
+      window.addEventListener("load", function () {
+        setTimeout(hideOverlay, 10500);
+      });
+    </script>
     <div class="container">
       <h1>Otobong Peter</h1>
       <div class="profile-section">
@@ -86,42 +310,67 @@
         </div>
 
         <p class="summary">
-          Experienced Software Engineer with over 6 years of professional
-          experience building scalable systems across
-          <span class="highlight">web, decentralized finance and AI</span>
-          technologies. In a post-AI world, I specialize in distributed systems,
-          resilient backend infrastructure, Systems security/research, AI
-          systems, and bringing real-world products to life on-chain.
+          Hi, I’m Otobong Peter — but you can call me Otee. I started my tech
+          journey in 2019, tinkering with microcontrollers as a hardware intern.
+          That hands-on experience with IoT sparked my passion for building
+          things that solve real-world problems. For my undergrad thesis, I
+          built a facial recognition–powered door lock system — an early step
+          toward systems that blend software and the physical world.
         </p>
       </div>
 
       <div class="content">
         <p class="justified">
-          I started as a hardware intern in 2019, building IoT systems with
-          microcontrollers. In 2020/21, I led GDSC (now GDG), part of the
-          <a
-            href="https://www.linkedin.com/posts/otobongfp_developerstudentclubs-activity-6740949609973071872-kLqc?utm_source=share&utm_medium=member_desktop&rcm=ACoAAB-IiO0BYQEzztlVpApCD5tdMFZa-RZPp7c"
-            class="pre-underline"
-            >Google Developer ecosystem</a
-          >, then I began exploring blockchain tech across EVM and Cardano, and
-          later led developer training and community growth at ABCD
-          technologies. Since then, I’ve built backend systems and real-world
-          asset protocols at
-          <a href="https://ltonetwork.com" class="pre-underline">LTO Network</a
-          >, and now focus on backend systems engineering, AI-powered systems,
-          etc
+          I started my tech journey in 2019, building IoT systems during a
+          hardware internship. My undergrad thesis—a facial recognition door
+          lock—cemented my interest in systems that bridge software and the real
+          world.
         </p>
 
         <p class="justified">
-          With a Bachelor's in Electronics and an ongoing M.Sc. in Software
-          Engineering, I'm also exploring research around
+          In 2020, I led the
+          <a
+            href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
+            class="highlight pre-underline"
+          >
+            Google Developer Student Club</a
+          >
+          at Rivers State University, discovering the power of mentorship and
+          community. I explored EVM and Cardano ecosystems, eventually joining
+          <a
+            href="https://iohk.io/en/blog/posts/2022/04/05/project-catalyst-launches-incubator-for-africa/"
+            >ABCD Technologies</a
+          >
+          as a co-founder, where I trained devs and scaled communities. I also
+          led Nigeria’s
+          <a
+            href="https://www.linkedin.com/posts/otobongfp_media-team-nigeria-activity-7013792404772139008-wQU7"
+            class="highlight pre-underline"
+            >Blacks in Technology chapter</a
+          >, which won Growth Chapter of the Year.
+        </p>
+
+        <p class="justified">
+          At
+          <a href="https://ltonetwork.com" class="pre-underline">LTO Network</a
+          >, I helped architect backend systems, client libraries to power the
+          RWA ecosystem and decentralized ID solutions, like the
+          <a
+            href="https://blog.ltonetwork.com/eqty_passport/"
+            class="highlight pre-underline"
+            >EQTY Passport</a
+          >. I'm focused on distributed systems, resilient backends, and
+          AI-powered tooling—still building for a post-AI world.
+        </p>
+
+        <p class="justified">
+          I hold a Bachelor’s in Electronics and I’m pursuing an M.Sc. in
+          Software Engineering. My research spans
           <span class="highlight"
-            >adaptive UI, agentic AI and distributed systems</span
-          >. In a parallel universe, you'd still find me learning endlessly,
-          exploring leadership,
-          <span class="highlight">building communities</span>, writing,
-          painting, reading documentation, and getting lost in sci-fi worlds.
-          I'm a Christian.
+            >agentic AI, adaptive UIs, dev tooling, and distributed
+            systems</span
+          >. Outside code, I explore leadership, write, paint, dive into sci-fi,
+          and build communities. Also, I'm a Christian.
         </p>
 
         <div class="image-grid">
@@ -145,12 +394,67 @@
 
       <!-- Projects Trigger -->
       <div class="projects-trigger sound-button">
-        <span class="trigger-text exempt-mode">Explore Projects</span>
+        <span class="trigger-text exempt-mode"
+          >Projects & OpenSource [click to view]</span
+        >
         <span class="trigger-icon exempt-mode">↓</span>
       </div>
 
       <!-- Projects Container -->
       <div id="projects-container"></div>
+
+      <!-- Skill Section -->
+      <div class="skills-section">
+        <h2 class="sub-heading">Skills & Tools</h2>
+        <ul class="skills-list">
+          <li><strong>Languages:</strong> Rust, Go, TypeScript, Python</li>
+          <li><strong>Backend:</strong> NestJS, FastAPI, Axum, Go-Fiber</li>
+          <li><strong>Database:</strong> PostgreSQL, SQL, MongoDB</li>
+          <li><strong>Frontend:</strong> React, Angular</li>
+          <li>
+            <strong>Infra & DevOps:</strong> AWS, Travis, Docker, Redis,
+            PostgreSQL, gRPC, Nginx, Prometheus, Grafana, Terraform, Kubernetes,
+            Kafka, RabbitMQ
+          </li>
+          <li><strong>AI/ML:</strong> OpenAI APIs, Pinecone, LangChain</li>
+          <li>
+            <strong>Blockchain:</strong> Solana (Anchor), LTO Ownables, EVM
+          </li>
+        </ul>
+      </div>
+
+      <!-- Speaking Section -->
+      <div class="speaking-section">
+        <h2 class="sub-heading">Public Speaking & Interviews</h2>
+        <ul class="speaking-list">
+          <li>
+            <strong>Gatherverse Africa</strong>
+            <a
+              href="https://gatherverse.live/otobong-peter-next-africa-closing-development-gaps-on-the-african-continent-with-blockchain/"
+              >Closing the development gaps on the African continent with
+              blockchain technology</a
+            >"
+          </li>
+          <li>
+            <strong>RSK Nigeria Meetup</strong>
+            <a
+              href="https://www.rootstocklabs.com/blog/techrity-and-african-blockchain-center-for-developers-join-the-rsk-community-to-hold-first-major-event-in-africa-the-rsk-nigeria-meetup/"
+              >Getting started with Blockchain</a
+            >
+          </li>
+          <li>
+            <strong>Coin News Extra</strong>
+            <a
+              href="https://www.youtube.com/watch?v=ef9KMVLrNpQ&pp=ygUXT1RPQk9ORyBQRVRFUiBJbnRlcnZpZXc%3D"
+              >Interview with Peter</a
+            >
+          </li>
+        </ul>
+        <p>
+          I enjoy sharing what I learn—through talks, panels, and spontaneous
+          deep dives. Available for dev talks and workshops.
+        </p>
+      </div>
 
       <!-- Articles Section -->
       <div class="articles">

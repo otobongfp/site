@@ -338,7 +338,7 @@ a:focus {
   border-radius: 30px;
   cursor: pointer;
   transition: all 0.3s ease;
-  max-width: 200px;
+  max-width: 400px;
   width: 100%;
   box-sizing: border-box;
   font-weight: bold;
