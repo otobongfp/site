@@ -22,7 +22,7 @@
     />
     <meta
       property="og:image"
-      content="https://otobongfp.com/assets/images/Otobong_Peter.jpeg"
+      content="https://otobongfp.com/assets/images/icon.png"
     />
 
     <!-- Twitter -->
@@ -35,7 +35,7 @@
     />
     <meta
       property="twitter:image"
-      content="https://otobongfp.com/assets/images/otobongpeter_profile.jpg"
+      content="https://otobongfp.com/assets/images/icon.png"
     />
 
     <!-- Fonts -->
@@ -52,15 +52,46 @@
       {
         "@context": "https://schema.org",
         "@type": "Person",
+        "@id": "https://otobongfp.com/#person",
         "name": "Otobong Peter",
+        "alternateName": "Otee",
         "url": "https://otobongfp.com",
-        "description": "software, engineering, systems, security, platforms",
-        "image": "https://otobongfp.com/assets/images/Otobong_Peter.jpeg",
+        "description": "Software Engineer and Systems Craftsman",
+        "jobTitle": "Software Engineer",
+        "image": {
+          "@type": "ImageObject",
+          "url": "https://otobongfp.com/assets/images/icon.png",
+          "width": 400,
+          "height": 400
+        },
         "sameAs": [
           "https://github.com/otobongfp",
           "https://www.linkedin.com/in/otobongfp",
-          "https://medium.com/@otobongpeter"
+          "https://medium.com/@otobongpeter",
+          "https://otobongpeter.substack.com/"
+        ],
+        "knowsAbout": [
+          "Distributed Systems",
+          "Artificial Intelligence",
+          "Blockchain Technology",
+          "Backend Development",
+          "Systems Design"
         ]
+      }
+    </script>
+
+    <!-- Website Schema -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://otobongfp.com/#website",
+        "url": "https://otobongfp.com",
+        "name": "Otobong Peter - Systems Craftsman",
+        "description": "Personal website of Otobong Peter, Software Engineer specializing in systems design, AI, blockchain technologies, etc",
+        "author": {
+          "@id": "https://otobongfp.com/#person"
+        }
       }
     </script>
   </head>
