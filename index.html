@@ -54,7 +54,7 @@
         "@type": "Person",
         "name": "Otobong Peter",
         "url": "https://otobongfp.com",
-        "description": "software, engineering, security, platforms",
+        "description": "software, engineering, systems, security, platforms",
         "image": "https://otobongfp.com/assets/images/Otobong_Peter.jpeg",
         "sameAs": [
           "https://github.com/otobongfp",
@@ -298,8 +298,29 @@
         setTimeout(hideOverlay, 10500);
       });
     </script>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">Otee</span>
+      </div>
+      <ul class="sidebar-nav">
+        <li><a href="#about" class="nav-link active">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#speaking" class="nav-link">Speaking</a></li>
+        <li><a href="#articles" class="nav-link">Articles</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="sidebarToggle" class="sidebar-toggle sound-button">
+          <span class="toggle-icon">☰</span>
+        </button>
+      </div>
+    </nav>
+
     <div class="container">
-      <h1>Otobong Peter</h1>
+      <h1 id="about">Otobong Peter</h1>
       <div class="profile-section">
         <div class="profile-pic-wrapper">
           <img
@@ -357,13 +378,24 @@
         </p>
 
         <p class="justified">
-          I hold a Bachelor’s in Electronics and I’m pursuing an M.Sc. in
-          Software Engineering. My research spans
+          My long-term goal is to deepen my work in systems design. As AI
+          becomes integral to everyday life, it opens new possibilities for
+          creating personalized systems and reshaping how humans interact with
+          machines. I'm particularly interested in designing intelligent systems
+          that not only enhance user experience but also address social
+          challenges—bridging gaps between developed and developing nations
+          through scalable, human-centered innovation.
+        </p>
+
+        <p class="justified">
+          I hold a Bachelor's in Electronics and I'm currently completing an
+          M.Sc. in Software Engineering. My research focuses on
           <span class="highlight"
-            >agentic AI, adaptive UIs, dev tooling, and distributed
-            systems</span
-          >. Outside code, I explore leadership, write, paint, dive into sci-fi,
-          and build communities. Also, I'm a Christian.
+            >agentic AI, adaptive user interfaces, developer tooling, and
+            systems design</span
+          >. Beyond code, I explore leadership, write, paint, read sci-fi, and
+          build communities. I'm also a Christian, which grounds my values and
+          vision.
         </p>
 
         <div class="image-grid">
@@ -394,10 +426,10 @@
       </div>
 
       <!-- Projects Container -->
-      <div id="projects-container"></div>
+      <div id="projects-container" data-section="projects"></div>
 
       <!-- Skill Section -->
-      <div class="skills-section">
+      <div class="skills-section" id="skills">
         <h2 class="sub-heading">Skills & Tools</h2>
         <ul class="skills-list">
           <li><strong>Languages:</strong> Rust, Go, TypeScript, Python</li>
@@ -417,7 +449,7 @@
       </div>
 
       <!-- Speaking Section -->
-      <div class="speaking-section">
+      <div class="speaking-section" id="speaking">
         <h2 class="sub-heading">Public Speaking & Interviews</h2>
         <ul class="speaking-list">
           <li>
@@ -450,7 +482,7 @@
       </div>
 
       <!-- Articles Section -->
-      <div class="articles">
+      <div class="articles" id="articles">
         <h2 class="sub-heading">Featured Articles</h2>
         <ul class="articles-list">
           <li>
@@ -495,7 +527,7 @@
       </div>
 
       <!-- Social Links section -->
-      <div>
+      <div id="contact">
         <h2 class="sub-heading">Places you can find me:</h2>
         <p>you can send an e-mail using hello@otobongfp.com</p>
         <div class="socials-card">
