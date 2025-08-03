@@ -267,7 +267,7 @@
       // Typewriter effect
       const messages = [
         "Otobong Peter here.",
-        "Engineering. Systems. Security. AI",
+        "AI. Systems. Design. Security",
         "¯\\_(ツ)_/¯",
       ];
       let messageIndex = 0;
@@ -341,7 +341,6 @@
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#speaking" class="nav-link">Speaking</a></li>
         <li><a href="#articles" class="nav-link">Articles</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
       <div class="sidebar-footer">
         <button id="sidebarToggle" class="sidebar-toggle sound-button">
@@ -351,43 +350,94 @@
     </nav>
 
     <div class="container">
-      <h1 id="about">Otobong Peter</h1>
-      <div class="profile-section">
-        <div class="profile-pic-wrapper">
-          <img
-            src="assets/images/otobongpeter_profile.jpg"
-            alt="Otobong Peter - Profile Picture"
-            class="profile-pic"
-          />
-        </div>
+      <section id="about">
+        <div class="profile-header">
+          <div class="profile-image-wrapper">
+            <img
+              src="assets/images/otobongpeter_profile.jpg"
+              alt="Otobong Peter - Profile Picture"
+              class="profile-pic"
+            />
+          </div>
+          <div class="profile-info">
+            <h1 class="name">Otobong Peter</h1>
+            <p class="role">
+              Software Engineer · Researcher
+            </p>
+            <p class="research-focus">
+              Human-Centered Design · Machine Learning · Distributed Systems
+            </p>
 
-        <p class="summary">
-          Hi, I’m Otobong Peter — but you can call me Otee. I started my tech
-          journey in 2019, tinkering with microcontrollers as a hardware intern.
-          That hands-on experience with IoT sparked my passion for building
-          things that solve real-world problems. For my undergrad thesis, I
-          built a facial recognition–powered door lock system — an early step
-          toward systems that blend software and the physical world.
-        </p>
-      </div>
+            <div class="profile-links">
+              <a
+                href="mailto:hello@otobongfp.com"
+                target="_blank"
+                class="profile-link"
+              >
+                <span class="link-icon">📧</span> Email
+              </a>
+              <a
+                href="https://medium.com/@otobongpeter"
+                target="_blank"
+                class="profile-link"
+              >
+                <span class="link-icon">📰</span> Medium
+              </a>
+              <a
+                href="https://github.com/otobongfp"
+                target="_blank"
+                class="profile-link"
+              >
+                <span class="link-icon">💻</span> GitHub
+              </a>
+              <a
+                href="https://www.linkedin.com/in/otobongfp"
+                target="_blank"
+                class="profile-link"
+              >
+                <span class="link-icon">🔗</span> LinkedIn
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <div class="content">
+        <p class="justified">
+          I’m Otobong Peter, a systems engineer and researcher currently
+          completing an M.Sc. in Software Engineering. My work spans
+          <span class="highlight"
+            >machine learning, distributed systems, and human-centered
+            design</span
+          >, with a focus on how intelligent infrastructure can power
+          personalized experiences and scalable digital ecosystems. My research
+          interests include agentic interfaces, developer-centric tooling, and
+          resilient backend architectures for emerging markets.
+        </p>
+
+        <p class="justified">
+          My technical career began in 2019 as a hardware intern, where I worked
+          with microcontrollers and IoT systems. This hands-on foundation shaped
+          my early interest in blending software with physical systems. For my
+          undergraduate thesis, I designed a facial recognition–based smart door
+          lock—my first exploration into intelligent systems at the edge.
+        </p>
+
         <p class="justified">
           In 2020, I led the
           <a
             href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
             class="highlight pre-underline"
+            >Google Developer Student Club</a
           >
-            Google Developer Student Club</a
-          >
-          at Rivers State University, discovering the power of mentorship and
-          community. I explored EVM and Cardano ecosystems, eventually joining
+          at Rivers State University and became deeply involved in developer
+          education and open-source mentorship. I co-founded
           <a
             href="https://iohk.io/en/blog/posts/2022/04/05/project-catalyst-launches-incubator-for-africa/"
-            >ABCD Technologies</a
+            >ABCD Africa</a
           >
-          as a co-founder, where I trained devs and scaled communities. I also
-          led Nigeria’s
+          to support blockchain developers across Nigeria and later helped grow
+          the Nigerian
           <a
             href="https://www.linkedin.com/posts/otobongfp_media-team-nigeria-activity-7013792404772139008-wQU7"
             class="highlight pre-underline"
@@ -398,40 +448,49 @@
         <p class="justified">
           At
           <a href="https://ltonetwork.com" class="pre-underline">LTO Network</a
-          >, I helped architect backend systems, client libraries to power the
-          RWA ecosystem and decentralized ID solutions, like the
+          >, I contributed to the core backend infrastructure powering
+          decentralized identity and real-world asset systems. I designed and
+          maintained client libraries, cryptographic event chains, and services
+          for projects like the
           <a
             href="https://blog.ltonetwork.com/eqty_passport/"
             class="highlight pre-underline"
             >EQTY Passport</a
-          >. I'm focused on distributed systems, resilient backends, and
-          AI-powered tooling—still building for a post-AI world.
+          >. I’ve also built secure CLI tooling, real-time messaging pipelines,
+          and developer-facing libraries for the Ownables protocol.
         </p>
 
         <p class="justified">
-          My long-term goal is to deepen my work in systems design. As AI
-          becomes integral to everyday life, it opens new possibilities for
-          creating personalized systems and reshaping how humans interact with
-          machines. I'm particularly interested in designing intelligent systems
-          that not only enhance user experience but also address social
-          challenges—bridging gaps between developed and developing nations
-          through scalable, human-centered innovation.
+          Recent work includes building:
+          <li><strong> <a href="https://kulawise.com" rel="noopener noreferrer">Kulawise</a></strong
+            >, an AI-powered health platform;</li>
+          <li><strong> <a href="https://github.com/otobongfp/repolens" rel="noopener noreferrer">RepoLens</a></a></strong
+          >, a developer onboarding tool using local ASTs and LLMs; and </li>
+          <li><strong><a href="https://fraqtion.xyz" rel="noopener noreferrer">Fraqtion Intelligence</a></strong>, a Rust-based market signal
+          system for founders and investors.</li>
+          
+          Across these projects, I’ve worked
+          in Rust, Go, Python, and TypeScript—often leading architecture and LLM
+          integration.
         </p>
 
         <p class="justified">
-          I hold a Bachelor's in Electronics and I'm currently completing an
-          M.Sc. in Software Engineering. My research focuses on
-          <span class="highlight"
-            >agentic AI, adaptive user interfaces, developer tooling, and
-            systems design</span
-          >. Beyond code, I explore leadership, write, paint, read sci-fi, and
-          build communities. I'm also a Christian, which grounds my values and
-          vision.
+          I’m particularly interested in how systems design can bridge
+          infrastructure gaps between the Global South and the rest of the
+          world. My long-term goal is to build human-aligned, AI-native
+          infrastructure that adapts across contexts in health, civic,
+          educational or economic.
+        </p>
+
+        <p class="justified">
+          Outside of coding or research, I write essays, lead events through the OpenForge
+          community, and explore interests in leadership, theology, and fiction.
+          I'm a Christian.
         </p>
 
         <div class="image-grid">
           <img
-            src="assets/images/Otobong_Peter.jpeg"
+            src="assets/images/presentation.jpeg"
             alt="At a tech event"
             class="content-image"
           />
@@ -451,7 +510,7 @@
       <!-- Projects Trigger -->
       <div class="projects-trigger sound-button">
         <span class="trigger-text exempt-mode"
-          >Projects & OpenSource [click to view]</span
+          >[some projects: click to view]</span
         >
         <span class="trigger-icon exempt-mode">↓</span>
       </div>
@@ -459,144 +518,201 @@
       <!-- Projects Container -->
       <div id="projects-container" data-section="projects"></div>
 
-      <!-- Skill Section -->
-      <div class="skills-section" id="skills">
+      <!-- Skills Section -->
+      <section class="skills-section" id="skills">
         <h2 class="sub-heading">Skills & Tools</h2>
-        <ul class="skills-list">
-          <li><strong>Languages:</strong> Rust, Go, TypeScript, Python</li>
-          <li><strong>Backend:</strong> NestJS, FastAPI, Axum, Go-Fiber</li>
-          <li><strong>Database:</strong> PostgreSQL, SQL, MongoDB</li>
-          <li><strong>Frontend:</strong> React, Angular</li>
-          <li>
-            <strong>Infra & DevOps:</strong> AWS, Travis, Docker, Redis,
-            PostgreSQL, gRPC, Nginx, Prometheus, Grafana, Terraform, Kubernetes,
-            Kafka, RabbitMQ
-          </li>
-          <li><strong>AI/ML:</strong> OpenAI APIs, Pinecone, LangChain</li>
-          <li>
+        <div class="skills-list">
+          <div class="skill-group">
+            <strong>Languages:</strong> Rust, Go, TypeScript, Python
+          </div>
+          <div class="skill-group">
+            <strong>Backend:</strong> NestJS, FastAPI, Axum, gRPC
+          </div>
+          <div class="skill-group">
+            <strong>Databases:</strong> PostgreSQL, MongoDB, Redis
+          </div>
+          <div class="skill-group">
+            <strong>Infrastructure & DevOps:</strong> AWS, Docker, Kubernetes,
+            Terraform, Prometheus, Grafana
+          </div>
+          <div class="skill-group">
+            <strong>AI/ML:</strong> OpenAI APIs, Pinecone, LangChain
+          </div>
+          <div class="skill-group">
             <strong>Blockchain:</strong> Solana (Anchor), LTO Ownables, EVM
-          </li>
-        </ul>
-      </div>
-
-      <!-- Speaking Section -->
-      <div class="speaking-section" id="speaking">
-        <h2 class="sub-heading">Public Speaking & Interviews</h2>
-        <ul class="speaking-list">
-          <li>
-            <strong>Gatherverse Africa</strong>
-            <a
-              href="https://gatherverse.live/otobong-peter-next-africa-closing-development-gaps-on-the-african-continent-with-blockchain/"
-              >Closing the development gaps on the African continent with
-              blockchain technology</a
-            >"
-          </li>
-          <li>
-            <strong>RSK Nigeria Meetup</strong>
-            <a
-              href="https://www.rootstocklabs.com/blog/techrity-and-african-blockchain-center-for-developers-join-the-rsk-community-to-hold-first-major-event-in-africa-the-rsk-nigeria-meetup/"
-              >Getting started with Blockchain</a
-            >
-          </li>
-          <li>
-            <strong>Coin News Extra</strong>
-            <a
-              href="https://www.youtube.com/watch?v=ef9KMVLrNpQ&pp=ygUXT1RPQk9ORyBQRVRFUiBJbnRlcnZpZXc%3D"
-              >Interview with Peter</a
-            >
-          </li>
-        </ul>
-        <p>
-          I enjoy sharing what I learn—through talks, panels, and spontaneous
-          deep dives. Available for dev talks and workshops.
-        </p>
-      </div>
-
-      <!-- Articles Section -->
-      <div class="articles" id="articles">
-        <h2 class="sub-heading">Featured Articles</h2>
-        <ul class="articles-list">
-          <li>
-            <a
-              href="https://medium.com/@otobongpeter/simplifying-the-concept-of-ownership-and-borrowing-in-the-rust-programming-language-1b5205b19bac"
-              class="article-link"
-            >
-              <span class="article-title">
-                Simplifying the Concept of Ownership and Borrowing in the Rust
-                Programming Language
-              </span>
-              -
-              <span>Aug, 2023</span>
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://medium.com/insiderfinance/stable-coins-a-game-changer-or-a-disaster-waiting-to-happen-206d42d5ced"
-              class="article-link"
-            >
-              <span class="article-title">
-                Stable Coins: A game-changer or a disaster waiting to happen?
-              </span>
-              -
-              <span>Oct, 2021</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
-              class="article-link"
-            >
-              <span class="article-title">
-                My Experience Leading a Google Students' Community
-              </span>
-              -
-              <span>Sept, 2021</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Social Links section -->
-      <div id="contact">
-        <h2 class="sub-heading">Places you can find me:</h2>
-        <p>you can send an e-mail using hello@otobongfp.com</p>
-        <div class="socials-card">
-          <div class="social-links exempt-mode">
-            <a
-              href="https://github.com/otobongfp"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link exempt-mode"
-            >
-              GitHub
-            </a>
-            <a
-              href="https://www.linkedin.com/in/otobongfp"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link exempt-mode"
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://medium.com/@otobongpeter"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link exempt-mode"
-            >
-              Medium
-            </a>
-            <a
-              href="https://otobongpeter.substack.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="social-link substack-link"
-            >
-              Blog
-            </a>
           </div>
         </div>
+      </section>
+
+      <!-- Speaking Section -->
+      <section class="speaking-section" id="speaking">
+        <h2 class="sub-heading">Speaking & Presentations</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="event-title">Paper Presentation: ICMEAS 2025</h3>
+                <span class="event-venue">Nile University</span>
+              </div>
+              <p class="event-description">
+                "Beyond static interfaces: A Protocol for Agentic, Intent-Driven
+                Adaptive User Interfaces"
+              </p>
+              <a
+                href="https://www.linkedin.com/posts/otobongfp_ai-conferencepaper-activity-7356731390471634944-jyRU"
+                class="event-link"
+                target="_blank"
+                rel="noopener"
+              >
+                View Details →
+              </a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="event-title">Gatherverse Africa</h3>
+                <span class="event-venue">Virtual Conference</span>
+              </div>
+              <p class="event-description">
+                Closing the development gaps on the African continent with
+                blockchain technology
+              </p>
+              <a
+                href="https://gatherverse.live/otobong-peter-next-africa-closing-development-gaps-on-the-african-continent-with-blockchain/"
+                class="event-link"
+                target="_blank"
+                rel="noopener"
+              >
+                Watch Presentation →
+              </a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="event-title">RSK Nigeria Meetup</h3>
+                <span class="event-venue">Lagos, Nigeria</span>
+              </div>
+              <p class="event-description">
+                Getting started with Blockchain development and ecosystem
+              </p>
+              <a
+                href="https://www.rootstocklabs.com/blog/techrity-and-african-blockchain-center-for-developers-join-the-rsk-community-to-hold-first-major-event-in-africa-the-rsk-nigeria-meetup/"
+                class="event-link"
+                target="_blank"
+                rel="noopener"
+              >
+                Read More →
+              </a>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="event-title">Coin News Extra Interview</h3>
+                <span class="event-venue">Media Interview</span>
+              </div>
+              <p class="event-description">
+                Discussing blockchain technology and its impact on African
+                development
+              </p>
+              <a
+                href="https://www.youtube.com/watch?v=ef9KMVLrNpQ&pp=ygUXT1RPQk9ORyBQRVRFUiBJbnRlcnZpZXc%3D"
+                class="event-link"
+                target="_blank"
+                rel="noopener"
+              >
+                Watch Interview →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="speaking-cta">
+          <p>
+            I enjoy sharing what I learn—through talks, panels, and spontaneous
+            deep dives.
+          </p>
+          <p><strong>Available for dev talks and workshops.</strong></p>
+        </div>
+      </section>
+
+      <!-- Articles Section -->
+      <section class="articles-section" id="articles">
+        <h2 class="sub-heading">Featured Articles</h2>
+        <div class="articles-grid">
+          <article class="article-card featured">
+            <div class="article-content">
+              <h3 class="article-title">
+                <a
+                  href="https://medium.com/@otobongpeter/simplifying-the-concept-of-ownership-and-borrowing-in-the-rust-programming-language-1b5205b19bac"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Simplifying the Concept of Ownership and Borrowing in the Rust
+                  Programming Language
+                </a>
+              </h3>
+              <p class="article-excerpt">
+                A comprehensive guide to understanding Rust's unique ownership
+                system and memory management principles.
+              </p>
+              <div class="article-meta">
+                <span class="article-date">August 2023</span>
+                <span class="article-platform">Medium</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-content">
+              <h3 class="article-title">
+                <a
+                  href="https://medium.com/insiderfinance/stable-coins-a-game-changer-or-a-disaster-waiting-to-happen-206d42d5ced"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Stable Coins: A game-changer or a disaster waiting to happen?
+                </a>
+              </h3>
+              <div class="article-meta">
+                <span class="article-date">October 2021</span>
+                <span class="article-platform">Insider Finance</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="article-card">
+            <div class="article-content">
+              <h3 class="article-title">
+                <a
+                  href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  My Experience Leading a Google Students' Community
+                </a>
+              </h3>
+              <div class="article-meta">
+                <span class="article-date">September 2021</span>
+                <span class="article-platform">Medium</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Social Links section -->
+      <div id="footer">
+          <p>©2025 Otobong Peter</p>
       </div>
 
       <!-- Add dark mode toggle button -->
