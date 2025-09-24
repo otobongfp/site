@@ -251,6 +251,43 @@
       }
     </style>
     <script>
+      // Session storage keys
+      const SESSION_KEYS = {
+        LOADING_SEEN: "loadingScreenSeen",
+        THEME_MODE: "themeMode",
+      };
+
+      // Check if loading screen should be shown
+      function shouldShowLoadingScreen() {
+        return !sessionStorage.getItem(SESSION_KEYS.LOADING_SEEN);
+      }
+
+      // Mark loading screen as seen
+      function markLoadingScreenSeen() {
+        sessionStorage.setItem(SESSION_KEYS.LOADING_SEEN, "true");
+      }
+
+      // Restore theme mode from session storage
+      function restoreThemeMode() {
+        const savedTheme = sessionStorage.getItem(SESSION_KEYS.THEME_MODE);
+        if (savedTheme === "dark") {
+          document.body.classList.add("dark-mode");
+        }
+      }
+
+      // Save theme mode to session storage
+      function saveThemeMode(isDark) {
+        sessionStorage.setItem(
+          SESSION_KEYS.THEME_MODE,
+          isDark ? "dark" : "light"
+        );
+      }
+
+      // Initialize theme mode
+      document.addEventListener("DOMContentLoaded", function () {
+        restoreThemeMode();
+      });
+
       // Set current date
       const date = new Date();
       document.addEventListener("DOMContentLoaded", function () {
@@ -264,70 +301,81 @@
           });
         }
       });
-      // Typewriter effect
-      const messages = [
-        "Otobong Peter here.",
-        "AI. Systems. Design. Security",
-        "¯\\_(ツ)_/¯",
-      ];
-      let messageIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-      let typingSpeed = 20;
-      let deletingSpeed = 30;
-      let pauseTime = 900;
-      function typeWriter() {
-        const typewriter = document.getElementById("typewriter");
-        if (!typewriter) return;
-        const currentMessage = messages[messageIndex];
-        if (isDeleting) {
-          typewriter.textContent = currentMessage.substring(0, charIndex - 1);
-          charIndex--;
-          typingSpeed = deletingSpeed;
-        } else {
-          typewriter.textContent = currentMessage.substring(0, charIndex + 1);
-          charIndex++;
-          typingSpeed = 100;
-        }
-        if (!isDeleting && charIndex === currentMessage.length) {
-          isDeleting = true;
-          typingSpeed = pauseTime;
-        } else if (isDeleting && charIndex === 0) {
-          isDeleting = false;
-          messageIndex = (messageIndex + 1) % messages.length;
-          if (messageIndex === 0) {
-            // After last message, show colored flash effect
-            document
-              .querySelector("#loading-overlay .glitch")
-              .classList.add("active");
-            setTimeout(() => {
+
+      // Show/hide loading screen based on session storage
+      if (shouldShowLoadingScreen()) {
+        // Typewriter effect
+        const messages = [
+          "Otobong Peter here.",
+          "AI. Systems. Design. Security",
+          "¯\\_(ツ)_/¯",
+        ];
+        let messageIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typingSpeed = 20;
+        let deletingSpeed = 30;
+        let pauseTime = 900;
+        function typeWriter() {
+          const typewriter = document.getElementById("typewriter");
+          if (!typewriter) return;
+          const currentMessage = messages[messageIndex];
+          if (isDeleting) {
+            typewriter.textContent = currentMessage.substring(0, charIndex - 1);
+            charIndex--;
+            typingSpeed = deletingSpeed;
+          } else {
+            typewriter.textContent = currentMessage.substring(0, charIndex + 1);
+            charIndex++;
+            typingSpeed = 100;
+          }
+          if (!isDeleting && charIndex === currentMessage.length) {
+            isDeleting = true;
+            typingSpeed = pauseTime;
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            messageIndex = (messageIndex + 1) % messages.length;
+            if (messageIndex === 0) {
+              // After last message, show colored flash effect
               document
                 .querySelector("#loading-overlay .glitch")
-                .classList.remove("active");
+                .classList.add("active");
               setTimeout(() => {
-                typewriter.innerHTML =
-                  "SYSTEM INITIALIZING<span class='blink'>_</span>";
-                document.getElementById("enterButton").classList.add("visible");
+                document
+                  .querySelector("#loading-overlay .glitch")
+                  .classList.remove("active");
+                setTimeout(() => {
+                  typewriter.innerHTML =
+                    "SYSTEM INITIALIZING<span class='blink'>_</span>";
+                  document
+                    .getElementById("enterButton")
+                    .classList.add("visible");
+                }, 100);
               }, 100);
-            }, 100);
-            return;
+              return;
+            }
           }
+          setTimeout(typeWriter, typingSpeed);
         }
-        setTimeout(typeWriter, typingSpeed);
-      }
-      setTimeout(() => {
-        typeWriter();
-      }, 500);
-      // Hide overlay after 5 seconds
-      function hideOverlay() {
+        setTimeout(() => {
+          typeWriter();
+        }, 500);
+
+        // Hide overlay after 5 seconds
+        function hideOverlay() {
+          document.getElementById("loading-overlay").classList.add("hide");
+          markLoadingScreenSeen();
+        }
+        document
+          .getElementById("enterButton")
+          .addEventListener("click", hideOverlay);
+        window.addEventListener("load", function () {
+          setTimeout(hideOverlay, 10500);
+        });
+      } else {
+        // Hide loading screen immediately if already seen
         document.getElementById("loading-overlay").classList.add("hide");
       }
-      document
-        .getElementById("enterButton")
-        .addEventListener("click", hideOverlay);
-      window.addEventListener("load", function () {
-        setTimeout(hideOverlay, 10500);
-      });
     </script>
 
     <!-- Sidebar Navigation -->
@@ -337,9 +385,8 @@
       </div>
       <ul class="sidebar-nav">
         <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#speaking" class="nav-link">Speaking</a></li>
         <li><a href="#articles" class="nav-link">Articles</a></li>
       </ul>
       <div class="sidebar-footer">
@@ -361,11 +408,10 @@
           </div>
           <div class="profile-info">
             <h1 class="name">Otobong Peter</h1>
-            <p class="role">
-              Software Engineer · Researcher
-            </p>
+            <p class="role">Software Engineer · Researcher</p>
             <p class="research-focus">
-              Distributed Systems · Human-Centered Design · Intelligent Software Systems
+              Distributed Systems · Human-Centered Design · Intelligent Software
+              Systems
             </p>
 
             <div class="profile-links">
@@ -405,7 +451,12 @@
       <div class="content">
         <p class="justified">
           I’m Otobong Peter, a systems engineer and researcher currently
-          completing an M.Sc. in Software Engineering. My work focuses on intelligent systems, human-centered design, and systems engineering, with an emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. I’m passionate about building software that bridges gaps in infrastructure and accessibility, especially across the Global South.
+          completing an M.Sc. in Software Engineering. My work focuses on
+          intelligent systems, human-centered design, and systems engineering,
+          with an emphasis on how IT infrastructure can be designed to power
+          adaptive, context-aware applications. I’m passionate about building
+          software that bridges gaps in infrastructure and accessibility,
+          especially across the Global South.
         </p>
 
         <p class="justified">
@@ -453,24 +504,76 @@
           and developer-facing libraries for the Ownables protocol.
         </p>
 
+        <p class="justified">Recent work includes building:</p>
+
+        <div class="recent-projects">
+          <div class="project-item">
+            <div class="project-icon">🌱</div>
+            <div class="project-content">
+              <h4>
+                <a
+                  href="https://kulawise.com"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Kulawise</a
+                >
+              </h4>
+              <p>AI-powered health platform</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-icon">🔍</div>
+            <div class="project-content">
+              <h4>
+                <a
+                  href="https://repolens.org"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >RepoLens</a
+                >
+              </h4>
+              <p>Developer onboarding tool using local ASTs and LLMs</p>
+            </div>
+          </div>
+
+          <div class="project-item">
+            <div class="project-icon">🍋</div>
+            <div class="project-content">
+              <h4>
+                <a
+                  href="https://lemonsupport.app"
+                  rel="noopener noreferrer"
+                  class="project-link"
+                  >Lemon Support</a
+                >
+              </h4>
+              <p>AI-powered customer support and sales automation platform</p>
+            </div>
+          </div>
+        </div>
+
         <p class="justified">
-          Recent work includes building:
-          <li><strong> <a href="https://kulawise.com" rel="noopener noreferrer">Kulawise</a></strong
-            >, an AI-powered health platform;</li>
-          <li><strong> <a href="https://repolens.org" rel="noopener noreferrer">RepoLens</a></a></strong
-          >, a developer onboarding tool using local ASTs and LLMs; and </li>
-          <li><strong><a href="https://lemonsupport.app" rel="noopener noreferrer">Lemon Support</a></strong>, an AI-powered customer support and sales automation platform</li>
-          
-          Across these projects, I’ve worked
-          in Rust, Go, Python, and TypeScript [Reactjs, Nextjs, Nestjs, Nodejs] — often leading architecture and LLM
+          Across these projects, I've worked in Rust, Go, Python, and TypeScript
+          [Reactjs, Nextjs, Nestjs, Nodejs] — often leading architecture and LLM
           integration.
         </p>
 
         <p class="justified">
-          Outside of coding or research, I write essays, lead events through the OpenForge
-          community, and explore interests in leadership, theology, and fiction.
-          I'm a Christian.
+          Outside of coding or research, I write essays, lead events through the
+          OpenForge community, and explore interests in leadership, theology,
+          and fiction. I'm a Christian.
         </p>
+
+        <div class="additional-links">
+          <p class="justified">
+            I also enjoy sharing knowledge through speaking engagements and
+            presentations.
+            <a href="pages/speaking.html" class="highlight pre-underline"
+              >View my speaking history →</a
+            >
+          </p>
+        </div>
 
         <div class="image-grid">
           <img
@@ -525,107 +628,6 @@
           <div class="skill-group">
             <strong>Blockchain:</strong> Solana (Anchor), LTO Ownables, EVM
           </div>
-        </div>
-      </section>
-
-      <!-- Speaking Section -->
-      <section class="speaking-section" id="speaking">
-        <h2 class="sub-heading">Speaking & Presentations</h2>
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="event-title">Paper Presentation: ICMEAS 2025</h3>
-                <span class="event-venue">Nile University</span>
-              </div>
-              <p class="event-description">
-                "Beyond static interfaces: A Protocol for Agentic, Intent-Driven
-                Adaptive User Interfaces"
-              </p>
-              <a
-                href="https://www.linkedin.com/posts/otobongfp_ai-conferencepaper-activity-7356731390471634944-jyRU"
-                class="event-link"
-                target="_blank"
-                rel="noopener"
-              >
-                View Details →
-              </a>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="event-title">Gatherverse Africa</h3>
-                <span class="event-venue">Virtual Conference</span>
-              </div>
-              <p class="event-description">
-                Closing the development gaps on the African continent with
-                blockchain technology
-              </p>
-              <a
-                href="https://gatherverse.live/otobong-peter-next-africa-closing-development-gaps-on-the-african-continent-with-blockchain/"
-                class="event-link"
-                target="_blank"
-                rel="noopener"
-              >
-                Watch Presentation →
-              </a>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="event-title">RSK Nigeria Meetup</h3>
-                <span class="event-venue">Lagos, Nigeria</span>
-              </div>
-              <p class="event-description">
-                Getting started with Blockchain development and ecosystem
-              </p>
-              <a
-                href="https://www.rootstocklabs.com/blog/techrity-and-african-blockchain-center-for-developers-join-the-rsk-community-to-hold-first-major-event-in-africa-the-rsk-nigeria-meetup/"
-                class="event-link"
-                target="_blank"
-                rel="noopener"
-              >
-                Read More →
-              </a>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-marker"></div>
-            <div class="timeline-content">
-              <div class="timeline-header">
-                <h3 class="event-title">Coin News Extra Interview</h3>
-                <span class="event-venue">Media Interview</span>
-              </div>
-              <p class="event-description">
-                Discussing blockchain technology and its impact on African
-                development
-              </p>
-              <a
-                href="https://www.youtube.com/watch?v=ef9KMVLrNpQ&pp=ygUXT1RPQk9ORyBQRVRFUiBJbnRlcnZpZXc%3D"
-                class="event-link"
-                target="_blank"
-                rel="noopener"
-              >
-                Watch Interview →
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <div class="speaking-cta">
-          <p>
-            I enjoy sharing what I learn—through talks, panels, and spontaneous
-            deep dives.
-          </p>
-          <p><strong>Available for dev talks and workshops.</strong></p>
         </div>
       </section>
 
@@ -696,7 +698,7 @@
 
       <!-- Social Links section -->
       <div id="footer">
-          <p>©2025 Otobong Peter</p>
+        <p>©2025 Otobong Peter</p>
       </div>
 
       <!-- Add dark mode toggle button -->
@@ -710,7 +712,8 @@
       document
         .getElementById("darkModeToggle")
         .addEventListener("click", function () {
-          document.body.classList.toggle("dark-mode");
+          const isDark = document.body.classList.toggle("dark-mode");
+          saveThemeMode(isDark);
         });
     </script>
   </body>
