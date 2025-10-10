@@ -12,6 +12,15 @@
     <link rel="canonical" href="https://otobongfp.com" />
     <link rel="icon" type="image/png" href="/favicon.ico" />
 
+    <meta
+      name="keywords"
+      content="Otobong Peter, software engineer, Products, researcher, AI, blockchain, distributed systems"
+    />
+    <meta
+      name="subject"
+      content="Otobong Peter - Software Engineer & Researcher"
+    />
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://otobongfp.com" />
@@ -307,7 +316,7 @@
         // Typewriter effect
         const messages = [
           "Otobong Peter here.",
-          "AI. Systems. Design. Security",
+          "AI. Systems. Design. Products",
           "¯\\_(ツ)_/¯",
         ];
         let messageIndex = 0;
@@ -378,16 +387,46 @@
       }
     </script>
 
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuToggle" class="mobile-menu-toggle sound-button">
+      <span class="toggle-icon">☰</span> Links
+    </button>
+
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
       <div class="sidebar-header">
         <span class="sidebar-title">Otee</span>
       </div>
       <ul class="sidebar-nav">
-        <li><a href="#about" class="nav-link active">About</a></li>
-        <li><a href="pages/projects.html" class="nav-link">Projects</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#articles" class="nav-link">Articles</a></li>
+        <li>
+          <a href="mailto:hello@otobongfp.com" target="_blank" class="nav-link"
+            >Email</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@otobongpeter"
+            target="_blank"
+            class="nav-link"
+            >Medium</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/otobongfp"
+            target="_blank"
+            class="nav-link"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/otobongfp"
+            target="_blank"
+            class="nav-link"
+            >LinkedIn</a
+          >
+        </li>
       </ul>
       <div class="sidebar-footer">
         <button id="sidebarToggle" class="sidebar-toggle sound-button">
@@ -397,324 +436,173 @@
     </nav>
 
     <div class="container">
-      <section id="about">
-        <div class="profile-header">
-          <div class="profile-image-wrapper">
-            <img
-              src="assets/images/otobongpeter_profile.jpg"
-              alt="Otobong Peter - Profile Picture"
-              class="profile-pic"
-            />
+      <div style="display: none">
+        <span>Otobong Peter</span>
+        <span>Otobong Peter software engineer</span>
+        <span>Otobong Peter researcher</span>
+        <span>Otobong Peter AI developer</span>
+        <span>Otobong Peter blockchain developer</span>
+      </div>
+
+      <!-- Main Grid Layout -->
+      <div class="main-grid">
+        <!-- Bio/CV Tile -->
+        <div class="grid-tile bio-tile">
+          <div class="tile-header">
+            <h2>Bio/CV</h2>
+            <div class="tile-icon">
+              <img
+                src="assets/images/otobongpeter_profile.jpg"
+                alt="Otobong Peter"
+                class="profile-icon"
+              />
+            </div>
           </div>
-          <div class="profile-info">
-            <h1 class="name">Otobong Peter</h1>
-            <p class="role">Software Engineer · Researcher</p>
-            <p class="research-focus">
-              Products · Distributed Systems · Human-Centered Design ·
-              Intelligent Software Systems
+          <div class="tile-content">
+            <p>
+              I'm Otobong Peter, a systems engineer and researcher currently
+              completing an M.Sc. in Software Engineering. My work focuses on
+              intelligent systems, human-centered design, and systems
+              engineering.
             </p>
-
-            <div class="profile-links">
-              <a
-                href="mailto:hello@otobongfp.com"
-                target="_blank"
-                class="profile-link"
-              >
-                <span class="link-icon">📧</span> Email
-              </a>
-              <a
-                href="https://medium.com/@otobongpeter"
-                target="_blank"
-                class="profile-link"
-              >
-                <span class="link-icon">📰</span> Medium
-              </a>
-              <a
-                href="https://github.com/otobongfp"
-                target="_blank"
-                class="profile-link"
-              >
-                <span class="link-icon">💻</span> GitHub
-              </a>
-              <a
-                href="https://www.linkedin.com/in/otobongfp"
-                target="_blank"
-                class="profile-link"
-              >
-                <span class="link-icon">🔗</span> LinkedIn
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <div class="content">
-        <p class="justified">
-          I’m Otobong Peter, a systems engineer and researcher currently
-          completing an M.Sc. in Software Engineering. My work focuses on
-          intelligent systems, human-centered design, and systems engineering,
-          with an emphasis on how IT infrastructure can be designed to power
-          adaptive, context-aware applications. I’m passionate about building
-          software that bridges gaps in infrastructure and accessibility,
-          especially across the Global South.
-        </p>
-
-        <p class="justified">
-          My technical career began in 2019 as a hardware intern, where I worked
-          with microcontrollers and IoT systems. This hands-on foundation shaped
-          my early interest in blending software with physical systems. For my
-          undergraduate thesis, I designed a facial recognition–based smart door
-          lock—my first exploration into intelligent systems at the edge.
-        </p>
-
-        <p class="justified">
-          In 2020, I led the
-          <a
-            href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
-            class="highlight pre-underline"
-            >Google Developer Student Club</a
-          >
-          at Rivers State University and became deeply involved in developer
-          education and open-source mentorship. I co-founded
-          <a
-            href="https://iohk.io/en/blog/posts/2022/04/05/project-catalyst-launches-incubator-for-africa/"
-            >ABCD Africa</a
-          >
-          to support blockchain developers across Nigeria and later helped grow
-          the Nigerian
-          <a
-            href="https://www.linkedin.com/posts/otobongfp_media-team-nigeria-activity-7013792404772139008-wQU7"
-            class="highlight pre-underline"
-            >Blacks in Technology chapter</a
-          >, which won Growth Chapter of the Year.
-        </p>
-
-        <p class="justified">
-          At
-          <a href="https://ltonetwork.com" class="pre-underline">LTO Network</a
-          >, I contributed to the core backend infrastructure powering
-          decentralized identity and real-world asset systems. I designed and
-          maintained client libraries, cryptographic event chains, and services
-          for projects like the
-          <a
-            href="https://blog.ltonetwork.com/eqty_passport/"
-            class="highlight pre-underline"
-            >EQTY Passport</a
-          >. I’ve also built secure CLI tooling, real-time messaging pipelines,
-          and developer-facing libraries for the Ownables protocol.
-        </p>
-
-        <p class="justified">Recent work includes building:</p>
-
-        <div class="recent-projects">
-          <div class="project-item">
-            <div class="project-icon">🌱</div>
-            <div class="project-content">
-              <h4>
-                <a
-                  href="https://kulawise.com"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  >Kulawise</a
-                >
-              </h4>
-              <p>AI-powered health platform</p>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-icon">🔍</div>
-            <div class="project-content">
-              <h4>
-                <a
-                  href="https://repolens.org"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  >RepoLens</a
-                >
-              </h4>
-              <p>Developer onboarding tool using local ASTs and LLMs</p>
-            </div>
-          </div>
-
-          <div class="project-item">
-            <div class="project-icon">🍋</div>
-            <div class="project-content">
-              <h4>
-                <a
-                  href="https://lemonsupport.app"
-                  rel="noopener noreferrer"
-                  class="project-link"
-                  >Lemon Support</a
-                >
-              </h4>
-              <p>AI-powered customer support and sales automation platform</p>
+            <div class="tile-actions">
+              <a href="pages/bio.html" class="tile-link">View Full Bio</a>
+              <a href="#" class="tile-link">Download CV</a>
             </div>
           </div>
         </div>
 
-        <p class="justified">
-          Across these projects, I've worked in Rust, Go, Python, and TypeScript
-          [Reactjs, Nextjs, Nestjs, Nodejs] — often leading architecture and LLM
-          integration.
-        </p>
-
-        <p class="justified">
-          Outside of coding or research, I write essays, lead events through the
-          OpenForge community, and explore interests in leadership, theology,
-          and fiction. I'm a Christian.
-        </p>
-
-        <div class="additional-links">
-          <p class="justified">
-            I also enjoy sharing knowledge through speaking engagements and
-            presentations.
-            <a href="pages/speaking.html" class="highlight pre-underline"
-              >View my speaking history →</a
-            >
-          </p>
+        <!-- Talks/Text Tile -->
+        <div class="grid-tile talks-tile">
+          <div class="tile-header">
+            <h2>Talks/Text</h2>
+          </div>
+          <div class="tile-content">
+            <div class="timeline-preview">
+              <div class="timeline-item-preview">
+                <span class="timeline-date">2023</span>
+                <span class="timeline-title">Rust Ownership Guide</span>
+              </div>
+              <div class="timeline-item-preview">
+                <span class="timeline-date">2021</span>
+                <span class="timeline-title">Stable Coins Analysis</span>
+              </div>
+            </div>
+            <div class="tile-actions">
+              <a href="pages/speaking.html" class="tile-link">View All</a>
+            </div>
+          </div>
         </div>
 
-        <div class="image-grid">
-          <img
-            src="assets/images/otobong_peter_presentation.jpeg"
-            alt="Otobong Peter - Paper Presentation"
-            class="content-image"
-          />
-          <img
-            src="assets/images/Otobong_Peter_Event.jpeg"
-            alt="Otobong Peter - Organized engineers mixer"
-            class="content-image"
-          />
-          <img
-            src="assets/images/Otobong_Peter_Speak.jpg"
-            alt="Otobong Peter - Speaking at an event"
-            class="content-image"
-          />
+        <!-- Projects Tile -->
+        <div class="grid-tile projects-tile">
+          <div class="tile-header">
+            <h2>Projects</h2>
+          </div>
+          <div class="tile-content">
+            <div class="projects-preview">
+              <div class="project-preview">
+                <span class="project-name">Kulawise</span>
+                <span class="project-desc">AI health platform</span>
+              </div>
+              <div class="project-preview">
+                <span class="project-name">RepoLens</span>
+                <span class="project-desc">Developer onboarding tool</span>
+              </div>
+            </div>
+            <div class="tile-actions">
+              <a href="pages/projects.html" class="tile-link">View All</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Evolution Tile -->
+        <div class="grid-tile evolution-tile">
+          <div class="tile-header">
+            <h2>Evolution</h2>
+            <div class="tile-icon">∞</div>
+          </div>
+          <div class="tile-content">
+            <p>Still evolving...</p>
+            <div class="tile-actions">
+              <a href="pages/evolution.html" class="tile-link">Enter</a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <!-- Projects Trigger -->
-      <div class="projects-trigger sound-button">
-        <span class="trigger-text exempt-mode"
-          >[some projects: click to view]</span
-        >
-        <span class="trigger-icon exempt-mode">↓</span>
-      </div>
-
-      <!-- Projects Container -->
-      <div id="projects-container" data-section="projects"></div>
-
-      <!-- Skills Section -->
-      <section class="skills-section" id="skills">
-        <h2 class="sub-heading">Skills & Tools</h2>
-        <div class="skills-list">
-          <div class="skill-group">
-            <strong>Languages:</strong> Rust, Go, TypeScript, Python
-          </div>
-          <div class="skill-group">
-            <strong>Backend:</strong> NestJS, FastAPI, Axum, gRPC
-          </div>
-          <div class="skill-group">
-            <strong>Databases:</strong> PostgreSQL, MongoDB, Redis
-          </div>
-          <div class="skill-group">
-            <strong>Infrastructure & DevOps:</strong> AWS, Docker, Kubernetes,
-            Terraform, Prometheus, Grafana
-          </div>
-          <div class="skill-group">
-            <strong>AI/ML:</strong> OpenAI APIs, Pinecone, LangChain
-          </div>
-          <div class="skill-group">
-            <strong>Blockchain:</strong> Solana (Anchor), LTO Ownables, EVM
-          </div>
-        </div>
-      </section>
-
-      <!-- Articles Section -->
-      <section class="articles-section" id="articles">
-        <h2 class="sub-heading">Featured Articles</h2>
-        <div class="articles-grid">
-          <article class="article-card featured">
-            <div class="article-content">
-              <h3 class="article-title">
-                <a
-                  href="https://medium.com/@otobongpeter/simplifying-the-concept-of-ownership-and-borrowing-in-the-rust-programming-language-1b5205b19bac"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Simplifying the Concept of Ownership and Borrowing in the Rust
-                  Programming Language
-                </a>
-              </h3>
-              <p class="article-excerpt">
-                A comprehensive guide to understanding Rust's unique ownership
-                system and memory management principles.
-              </p>
-              <div class="article-meta">
-                <span class="article-date">August 2023</span>
-                <span class="article-platform">Medium</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="article-card">
-            <div class="article-content">
-              <h3 class="article-title">
-                <a
-                  href="https://medium.com/insiderfinance/stable-coins-a-game-changer-or-a-disaster-waiting-to-happen-206d42d5ced"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  Stable Coins: A game-changer or a disaster waiting to happen?
-                </a>
-              </h3>
-              <div class="article-meta">
-                <span class="article-date">October 2021</span>
-                <span class="article-platform">Insider Finance</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="article-card">
-            <div class="article-content">
-              <h3 class="article-title">
-                <a
-                  href="https://medium.com/@otobongpeter/my-experience-leading-a-google-students-community-6cdc4e45466f"
-                  target="_blank"
-                  rel="noopener"
-                >
-                  My Experience Leading a Google Students' Community
-                </a>
-              </h3>
-              <div class="article-meta">
-                <span class="article-date">September 2021</span>
-                <span class="article-platform">Medium</span>
-              </div>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- Social Links section -->
+      <!-- Footer -->
       <div id="footer">
         <p>©2025 Otobong Peter</p>
       </div>
 
-      <!-- Add dark mode toggle button -->
+      <!-- Dark mode toggle button -->
       <button id="darkModeToggle" class="dark-mode-toggle sound-button">
-        Mode
+        <svg
+          class="mode-icon sun-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="mode-icon moon-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
       </button>
     </div>
     <script src="js/main.js"></script>
     <script src="js/sounds.js"></script>
     <script>
+      // Update mode icon based on current theme
+      function updateModeIcon(isLight) {
+        const sunIcon = document.querySelector(".sun-icon");
+        const moonIcon = document.querySelector(".moon-icon");
+        if (sunIcon && moonIcon) {
+          sunIcon.style.display = isLight ? "block" : "none";
+          moonIcon.style.display = isLight ? "none" : "block";
+        }
+      }
+
       document
         .getElementById("darkModeToggle")
         .addEventListener("click", function () {
-          const isDark = document.body.classList.toggle("dark-mode");
-          saveThemeMode(isDark);
+          const isLight = document.body.classList.toggle("light-mode");
+          sessionStorage.setItem("themeMode", isLight ? "light" : "dark");
+          updateModeIcon(isLight);
         });
+
+      // Initialize icon on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = sessionStorage.getItem("themeMode");
+        const isLight =
+          savedTheme === "light" ||
+          (!savedTheme &&
+            window.matchMedia("(prefers-color-scheme: light)").matches);
+        if (isLight) {
+          document.body.classList.add("light-mode");
+        }
+        updateModeIcon(isLight);
+      });
     </script>
   </body>
 </html>

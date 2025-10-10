@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evolution - Otobong Peter</title>
+    <meta name="description" content="Still evolving..." />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+
+    <meta name="author" content="Otobong Peter" />
+    <meta
+      name="keywords"
+      content="Otobong Peter, evolution, development, growth, software engineer"
+    />
+    <meta name="subject" content="Otobong Peter Evolution - Still Evolving" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <style>
+      .evolution-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 80vh;
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .evolution-icon {
+        font-size: 8rem;
+        margin-bottom: 2rem;
+        animation: pulse 2s infinite;
+        opacity: 0.8;
+      }
+
+      .evolution-text {
+        font-size: 2rem;
+        font-weight: 300;
+        margin-bottom: 1rem;
+        color: var(--text-color);
+        opacity: 0.9;
+      }
+
+      .evolution-subtitle {
+        font-size: 1.2rem;
+        color: var(--text-color);
+        opacity: 0.7;
+        margin-bottom: 3rem;
+      }
+
+      .loader {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        border: 3px solid var(--sidebar-border);
+        border-radius: 50%;
+        border-top-color: var(--highlight-bg);
+        animation: spin 1s ease-in-out infinite;
+        margin-bottom: 2rem;
+      }
+
+      @keyframes spin {
+        to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.8;
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+      }
+
+      .back-button {
+        display: inline-block;
+        padding: 1rem 2rem;
+        background: var(--highlight-bg);
+        color: var(--highlight-text);
+        text-decoration: none;
+        border-radius: 8px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        margin-top: 2rem;
+      }
+
+      .back-button:hover {
+        background: var(--highlight-text);
+        color: var(--highlight-bg);
+        transform: translateY(-2px);
+      }
+
+      @media (max-width: 768px) {
+        .evolution-icon {
+          font-size: 6rem;
+        }
+
+        .evolution-text {
+          font-size: 1.5rem;
+        }
+
+        .evolution-subtitle {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Mobile Menu Button -->
+    <button id="mobileMenuToggle" class="mobile-menu-toggle sound-button">
+      <span class="toggle-icon">☰</span> Links
+    </button>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <span class="sidebar-title">Otee</span>
+      </div>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="mailto:hello@otobongfp.com" target="_blank" class="nav-link"
+            >Email</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://medium.com/@otobongpeter"
+            target="_blank"
+            class="nav-link"
+            >Medium</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://github.com/otobongfp"
+            target="_blank"
+            class="nav-link"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/otobongfp"
+            target="_blank"
+            class="nav-link"
+            >LinkedIn</a
+          >
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <button id="sidebarToggle" class="sidebar-toggle sound-button">
+          <span class="toggle-icon">☰</span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div style="display: none">
+        <span>Otobong Peter</span>
+        <span>Otobong Peter evolution</span>
+        <span>Otobong Peter development</span>
+        <span>Otobong Peter growth</span>
+        <span>Otobong Peter still evolving</span>
+      </div>
+
+      <div class="evolution-container">
+        <div class="evolution-icon">∞</div>
+        <h1 class="evolution-text">Still Evolving</h1>
+        <p class="evolution-subtitle">The journey continues...</p>
+        <div class="loader"></div>
+        <a href="../index.html" class="back-button">Return Home</a>
+      </div>
+
+      <!-- Footer -->
+      <div id="footer">
+        <p>©2025 Otobong Peter</p>
+      </div>
+
+      <!-- Dark mode toggle button -->
+      <button id="darkModeToggle" class="dark-mode-toggle sound-button">
+        <svg
+          class="mode-icon sun-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="mode-icon moon-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/sounds.js"></script>
+    <script>
+      // Update mode icon based on current theme
+      function updateModeIcon(isLight) {
+        const sunIcon = document.querySelector(".sun-icon");
+        const moonIcon = document.querySelector(".moon-icon");
+        if (sunIcon && moonIcon) {
+          sunIcon.style.display = isLight ? "block" : "none";
+          moonIcon.style.display = isLight ? "none" : "block";
+        }
+      }
+
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          const isLight = document.body.classList.toggle("light-mode");
+          // Save theme mode to session storage
+          sessionStorage.setItem("themeMode", isLight ? "light" : "dark");
+          updateModeIcon(isLight);
+        });
+
+      // Initialize icon on page load
+      document.addEventListener("DOMContentLoaded", function () {
+        const savedTheme = sessionStorage.getItem("themeMode");
+        const isLight =
+          savedTheme === "light" ||
+          (!savedTheme &&
+            window.matchMedia("(prefers-color-scheme: light)").matches);
+        if (isLight) {
+          document.body.classList.add("light-mode");
+        }
+        updateModeIcon(isLight);
+      });
+    </script>
+  </body>
+</html>

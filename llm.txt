@@ -1,0 +1,145 @@
+# Otobong Peter - Software Engineer & Researcher
+
+## Professional Summary
+Otobong Peter is a software engineer and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
+
+## Core Expertise Areas
+- Products: Product strategy, user research, agile methodologies, roadmap planning, stakeholder management
+- Distributed Systems: Building scalable, resilient systems architecture
+- Human-Centered Design: Creating user-focused software solutions
+- Intelligent Software Systems: AI-powered applications and adaptive interfaces
+
+## Technical Skills
+
+### Programming Languages
+- Rust: Systems programming, blockchain development
+- Go: Backend services, microservices architecture
+- TypeScript: Full-stack web development
+- Python: AI/ML applications, data processing
+- JavaScript: Frontend development, Node.js backend
+
+### Frontend Technologies
+- React: Component-based UI development
+- Next.js: Full-stack React applications
+- HTML5, CSS3: Semantic markup and styling
+- Tailwind CSS: Utility-first CSS framework
+
+### Backend Technologies
+- Node.js: JavaScript runtime for server-side development
+- FastAPI: High-performance Python web framework
+- NestJS: Scalable Node.js server-side applications
+- Axum: Rust web framework
+- gRPC: High-performance RPC framework
+
+### Databases
+- PostgreSQL: Relational database management
+- MongoDB: NoSQL document database
+- Redis: In-memory data structure store
+- SQLite: Lightweight embedded database
+
+### AI/ML Technologies
+- OpenAI APIs: Large language model integration
+- LangChain: Framework for developing LLM applications
+- Pinecone: Vector database for AI applications
+- TensorFlow: Machine learning framework
+
+### Blockchain Technologies
+- Solana (Anchor): Solana blockchain development
+- LTO Ownables: Digital asset protocol
+- EVM: Ethereum Virtual Machine
+- Web3: Decentralized application development
+
+### Infrastructure & DevOps
+- AWS: Cloud computing platform
+- Docker: Containerization platform
+- Kubernetes: Container orchestration
+- Terraform: Infrastructure as code
+- CI/CD: Continuous integration and deployment
+- Prometheus: Monitoring and alerting
+- Grafana: Analytics and monitoring platform
+- Git, GitHub Actions: Version control and automation
+
+### Product Management Tools
+- Jira: Issue tracking and project management
+- Trello: Kanban board project management
+- Asana: Project planning and team coordination
+- Notion: Documentation and knowledge management
+
+## Notable Projects
+
+### Kulawise (2024)
+AI-powered health intelligence platform that puts healthy living on auto-pilot with personalized nutrition recommendations and health tracking. Built with modern web technologies and AI integration.
+
+### RepoLens (2024)
+Fullstack AI-powered tool for analyzing code repositories, helping developers explore project structures and understand complex codebases faster. Features matching requirements to codebases using local ASTs and LLMs.
+
+### Lemon Support (2024)
+AI-powered customer support and sales automation platform with intelligent responses and streamlined customer interactions.
+
+### Ownables CLI (2023)
+Comprehensive CLI tool for building ownables on the LTO Layer-1 blockchain with easy-to-use commands for creating and managing digital assets.
+
+### Relay Protocol (2023)
+Peer-to-peer communication protocol for decentralized messaging with secure, direct communication between nodes and built-in encryption.
+
+### EQTY Passport (2022)
+Contributed to core backend infrastructure for decentralized identity system for real-world assets, building cryptographic event chains and client libraries.
+
+### Smart Door Lock (2019)
+Undergraduate thesis project: Facial recognition-based smart door lock system using microcontrollers and IoT technology - first exploration into intelligent systems.
+
+## Speaking & Presentations
+
+### Academic Presentations
+- ICMEAS 2025: "Beyond static interfaces: A Protocol for Agentic, Intent-Driven Adaptive User Interfaces" - Paper presentation at Nile University
+
+### Conference Talks
+- Gatherverse Africa: "Closing the development gaps on the African continent with blockchain technology" - Virtual conference presentation
+
+### Community Events
+- RSK Nigeria Meetup: "Getting started with Blockchain development and ecosystem" - Lagos, Nigeria
+- Coin News Extra Interview: Discussing blockchain technology and its impact on African development
+
+## Leadership & Community Involvement
+
+### Google Developer Student Club
+Led the Google Developer Student Club at Rivers State University, focusing on developer education and open-source mentorship.
+
+### Community Building
+- Co-founded ABCD Africa to support blockchain developers across Nigeria
+- Helped grow the Nigerian Blacks in Technology chapter, which won Growth Chapter of the Year
+- Active in OpenForge community leadership
+
+## Education & Background
+- M.Sc. in Software Engineering (in progress)
+- Undergraduate degree with thesis in intelligent systems
+- Started technical career in 2019 as hardware intern working with microcontrollers and IoT systems
+- Early interest in blending software with physical systems
+
+## Personal Interests
+- Writing essays on technology and development
+- Leadership development
+- Theology and Christian faith
+- Fiction writing
+- Community building and mentorship
+
+## Contact Information
+- Email: hello@otobongfp.com
+- GitHub: https://github.com/otobongfp
+- LinkedIn: https://www.linkedin.com/in/otobongfp
+- Medium: https://medium.com/@otobongpeter
+- Website: https://otobongfp.com
+
+## Key Achievements
+- Led Google Developer Student Club at Rivers State University
+- Co-founded ABCD Africa blockchain developer community
+- Contributed to LTO Network core infrastructure
+- Built multiple AI-powered applications
+- Published academic paper on adaptive user interfaces
+- Won Growth Chapter of the Year with Blacks in Technology Nigeria
+
+## Research Focus
+Current research focuses on intelligent systems, human-centered design, and systems engineering, particularly how IT infrastructure can be designed to power adaptive, context-aware applications that bridge infrastructure and accessibility gaps, especially in the Global South.
+
+## Professional Philosophy
+Passionate about building software that bridges gaps in infrastructure and accessibility, with a focus on creating intelligent systems that adapt to user needs and context. Believes in the power of technology to solve real-world problems and improve lives, particularly in underserved communities.
