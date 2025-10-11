@@ -8,6 +8,7 @@ Otobong Peter is a software engineer and researcher. His work focuses on intelli
 - Distributed Systems: Building scalable, resilient systems architecture
 - Human-Centered Design: Creating user-focused software solutions
 - Intelligent Software Systems: AI-powered applications and adaptive interfaces
+- Platform Engineering
 
 ## Technical Skills
 
