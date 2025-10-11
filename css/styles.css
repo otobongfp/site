@@ -1300,13 +1300,13 @@ a:focus {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--highlight-bg);
-  box-shadow: 0 2px 8px var(--card-shadow);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
 
 .profile-icon:hover {
   transform: scale(1.05);
-  box-shadow: 0 4px 12px var(--card-shadow);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .tile-content {

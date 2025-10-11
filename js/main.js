@@ -46,8 +46,12 @@ document.addEventListener("DOMContentLoaded", () => {
     link.addEventListener("click", (e) => {
       const href = link.getAttribute("href");
 
-      // If it's an external link (starts with pages/), let it navigate normally
-      if (href.startsWith("pages/")) {
+      // If it's an external link (mailto, http, https) or pages link, let it navigate normally
+      if (
+        href.startsWith("mailto:") ||
+        href.startsWith("http") ||
+        href.startsWith("pages/")
+      ) {
         return;
       }
 
