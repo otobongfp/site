@@ -45,7 +45,7 @@ Otobong Peter is a software engineer and researcher. His work focuses on intelli
 
 ### Blockchain Technologies
 - Solana (Anchor): Solana blockchain development
-- LTO Ownables: Digital asset protocol
+- LTO: Digital asset protocol
 - EVM: Ethereum Virtual Machine
 - Web3: Decentralized application development
 
@@ -67,13 +67,16 @@ Otobong Peter is a software engineer and researcher. His work focuses on intelli
 
 ## Notable Projects
 
-### Kulawise (2024)
+### Kulawise (2025)
 AI-powered health intelligence platform that puts healthy living on auto-pilot with personalized nutrition recommendations and health tracking. Built with modern web technologies and AI integration.
 
-### RepoLens (2024)
+### Fraqtion Finance (2024)
+Real-world asset tokenization platform focused on Africa, enabling businesses to tokenize assets on-chain while users participate using stablecoins through seamless dashboard/wallet experiences. Gateway between real-world assets and digital participation.
+
+### RepoLens (2025)
 Fullstack AI-powered tool for analyzing code repositories, helping developers explore project structures and understand complex codebases faster. Features matching requirements to codebases using local ASTs and LLMs.
 
-### Lemon Support (2024)
+### Lemon Support (2025)
 AI-powered customer support and sales automation platform with intelligent responses and streamlined customer interactions.
 
 ### Ownables CLI (2023)
