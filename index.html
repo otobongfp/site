@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Otobong Peter - Systems Craftsman</title>
+    <title>Otobong Peter - Systems & Product Craftsman</title>
     <meta
       name="description"
       content="Otobong Peter - I made this website to share my journey in technology and my projects."
@@ -27,7 +27,7 @@
     <meta property="og:title" content="Otobong Peter - Systems Craftsman" />
     <meta
       property="og:description"
-      content="Software Engineer and Systems Craftsman."
+      content="Software Engineer, Systems & Product Craftsman."
     />
     <meta
       property="og:image"
@@ -40,7 +40,7 @@
     <meta property="twitter:title" content="Otobong Peter" />
     <meta
       property="twitter:description"
-      content="Software Engineer and Systems Craftsman."
+      content="Software Engineer, Systems & Product Craftsman."
     />
     <meta
       property="twitter:image"
@@ -65,7 +65,7 @@
         "name": "Otobong Peter",
         "alternateName": "Otee",
         "url": "https://otobongfp.com",
-        "description": "Software Engineer and Systems Craftsman",
+        "description": "Software Engineer, Systems & Product Craftsman",
         "jobTitle": "Software Engineer",
         "image": {
           "@type": "ImageObject",
@@ -96,7 +96,7 @@
         "@type": "WebSite",
         "@id": "https://otobongfp.com/#website",
         "url": "https://otobongfp.com",
-        "name": "Otobong Peter - Systems Craftsman",
+        "name": "Otobong Peter - Systems & Product Craftsman",
         "description": "Personal website of Otobong Peter, Software Engineer specializing in systems design, AI, blockchain technologies, etc",
         "author": {
           "@id": "https://otobongfp.com/#person"
@@ -314,11 +314,7 @@
       // Show/hide loading screen based on session storage
       if (shouldShowLoadingScreen()) {
         // Typewriter effect
-        const messages = [
-          "Otobong Peter here.",
-          "Systems. AI. Products.",
-          "¯\\_(ツ)_/¯",
-        ];
+        const messages = ["Otobong Peter here.", "¯\\_(ツ)_/¯"];
         let messageIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
@@ -387,54 +383,6 @@
       }
     </script>
 
-    <!-- Mobile Menu Button -->
-    <button id="mobileMenuToggle" class="mobile-menu-toggle sound-button">
-      <span class="toggle-icon">☰</span> Links
-    </button>
-
-    <!-- Sidebar Navigation -->
-    <nav class="sidebar">
-      <div class="sidebar-header">
-        <span class="sidebar-title">Otee</span>
-      </div>
-      <ul class="sidebar-nav">
-        <li>
-          <a href="mailto:hello@otobongfp.com" target="_blank" class="nav-link"
-            >Email</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://medium.com/@otobongpeter"
-            target="_blank"
-            class="nav-link"
-            >Medium</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://github.com/otobongfp"
-            target="_blank"
-            class="nav-link"
-            >GitHub</a
-          >
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/otobongfp"
-            target="_blank"
-            class="nav-link"
-            >LinkedIn</a
-          >
-        </li>
-      </ul>
-      <div class="sidebar-footer">
-        <button id="sidebarToggle" class="sidebar-toggle sound-button">
-          <span class="toggle-icon">☰</span>
-        </button>
-      </div>
-    </nav>
-
     <div class="container">
       <div style="display: none">
         <span>Otobong Peter</span>
@@ -444,90 +392,69 @@
         <span>Otobong Peter blockchain developer</span>
       </div>
 
-      <!-- Main Grid Layout -->
-      <div class="main-grid">
-        <!-- Bio/CV Tile -->
-        <div class="grid-tile bio-tile">
-          <div class="tile-header">
-            <h2>Bio/CV</h2>
-            <div class="tile-icon">
-              <img
-                src="assets/images/otobongpeter_profile.jpg"
-                alt="Otobong Peter"
-                class="profile-icon"
-              />
-            </div>
-          </div>
-          <div class="tile-content">
-            <p>
-              I'm Otobong Peter, a systems engineer and researcher. My work
-              focuses on software systems, product and systems engineering.
-            </p>
-            <div class="tile-actions">
-              <a href="pages/bio.html" class="tile-link">View Full Bio</a>
-              <a href="#" class="tile-link">Download CV</a>
-            </div>
+      <!-- Profile Layout -->
+      <div class="profile-layout">
+        <!-- Profile Picture -->
+        <div class="profile-picture">
+          <img
+            src="assets/images/otobong peter.JPG"
+            alt="Otobong Peter"
+            class="profile-img"
+          />
+        </div>
+
+        <!-- Profile Info -->
+        <div class="profile-info">
+          <h1 class="profile-name">Otobong Peter</h1>
+          <p class="profile-role">Systems & Product Craftsman · Researcher</p>
+          <p class="profile-summary">
+            Building intelligent systems that align people, code, and capital to
+            make real-world coordination smarter across health, decentralized
+            finance, and work.
+          </p>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <a
+              href="mailto:hello@otobongfp.com"
+              target="_blank"
+              class="social-link"
+            >
+              Email
+            </a>
+            <span class="social-separator">|</span>
+            <a
+              href="https://medium.com/@otobongpeter"
+              target="_blank"
+              class="social-link"
+            >
+              Medium
+            </a>
+            <span class="social-separator">|</span>
+            <a
+              href="https://github.com/otobongfp"
+              target="_blank"
+              class="social-link"
+            >
+              GitHub
+            </a>
+            <span class="social-separator">|</span>
+            <a
+              href="https://www.linkedin.com/in/otobongfp"
+              target="_blank"
+              class="social-link"
+            >
+              LinkedIn
+            </a>
           </div>
         </div>
 
-        <!-- Talks/Text Tile -->
-        <div class="grid-tile talks-tile">
-          <div class="tile-header">
-            <h2>Talks/Text</h2>
-          </div>
-          <div class="tile-content">
-            <div class="timeline-preview">
-              <div class="timeline-item-preview">
-                <span class="timeline-date">2023</span>
-                <span class="timeline-title">Rust Ownership Guide</span>
-              </div>
-              <div class="timeline-item-preview">
-                <span class="timeline-date">2021</span>
-                <span class="timeline-title">Stable Coins Analysis</span>
-              </div>
-            </div>
-            <div class="tile-actions">
-              <a href="pages/speaking.html" class="tile-link">View All</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Projects Tile -->
-        <div class="grid-tile projects-tile">
-          <div class="tile-header">
-            <h2>Projects</h2>
-          </div>
-          <div class="tile-content">
-            <div class="projects-preview">
-              <div class="project-preview">
-                <span class="project-name">Kulawise</span>
-                <span class="project-desc">AI health platform</span>
-              </div>
-              <div class="project-preview">
-                <span class="project-name">Fraqtion Finance</span>
-                <span class="project-desc"
-                  >Real World Assets tokenization platform</span
-                >
-              </div>
-            </div>
-            <div class="tile-actions">
-              <a href="pages/projects.html" class="tile-link">View All</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Evolution Tile -->
-        <div class="grid-tile evolution-tile">
-          <div class="tile-header">
-            <h2>Evolution</h2>
-            <div class="tile-icon">∞</div>
-          </div>
-          <div class="tile-content">
-            <p>Still evolving...</p>
-            <div class="tile-actions">
-              <a href="pages/evolution.html" class="tile-link">Enter</a>
-            </div>
-          </div>
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+          <a href="pages/bio.html" class="nav-btn">Bio</a>
+          <a href="pages/projects.html" class="nav-btn">Projects</a>
+          <a href="pages/speaking.html" class="nav-btn">Talks</a>
+          <a href="pages/evolution.html" class="nav-btn infinity-btn">∞</a>
         </div>
       </div>
 
