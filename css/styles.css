@@ -1519,7 +1519,7 @@ a:focus {
   text-align: center;
   margin: 8rem 0 3rem 0;
   min-height: 60vh;
-  max-width: 600px;
+  max-width: 700px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -1579,7 +1579,7 @@ a:focus {
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text-color);
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
   opacity: 0.9;
   text-align: center;
@@ -1667,6 +1667,101 @@ a:focus {
   background: #6bffd1;
 }
 
+/* Tab Navigation */
+.tab-navigation {
+  display: flex;
+  gap: 0;
+  margin: 2rem 0;
+  border-bottom: 2px solid var(--sidebar-border);
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  opacity: 0.7;
+}
+
+.tab-button:hover {
+  opacity: 1;
+  color: var(--highlight-bg);
+}
+
+.tab-button.active {
+  opacity: 1;
+  color: var(--highlight-bg);
+  border-bottom-color: var(--highlight-bg);
+}
+
+.light-mode .tab-button:hover {
+  color: var(--text-color);
+}
+
+.light-mode .tab-button.active {
+  color: var(--text-color);
+  border-bottom-color: var(--text-color);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Research Tags */
+.research-tags {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.research-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.research-tag.paper {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.research-tag.opensource {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.research-tag.article {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
+.light-mode .research-tag.paper {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.light-mode .research-tag.opensource {
+  background: #f3e5f5;
+  color: #7b1fa2;
+}
+
+.light-mode .research-tag.article {
+  background: #e8f5e8;
+  color: #388e3c;
+}
+
 .social-separator {
   color: var(--text-color);
   opacity: 0.5;
@@ -1680,7 +1775,7 @@ a:focus {
 @media (max-width: 768px) {
   .profile-layout {
     margin: 3rem 0 2rem 0;
-    padding: 0 1rem;
+    padding: 0 0.75rem;
   }
 
   .profile-img {
@@ -1689,15 +1784,16 @@ a:focus {
   }
 
   .profile-name {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   .profile-role {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 
   .profile-summary {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    line-height: 1.5;
   }
 
   .nav-buttons {
