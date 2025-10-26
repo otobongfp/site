@@ -192,6 +192,12 @@ a:focus {
   color: var(--highlight-text);
 }
 
+/* Dark mode specific hover for better readability */
+body:not(.light-mode) .profile-link:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
 .link-icon {
   font-size: 1.1rem;
 }
@@ -364,6 +370,12 @@ a:focus {
   background-color: var(--text-color);
   color: var(--bg-color);
   transform: translateY(-2px);
+}
+
+/* Dark mode specific hover for social links - black text on white background */
+body:not(.light-mode) .social-link:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 .substack-link {
@@ -1640,6 +1652,12 @@ a:focus {
   opacity: 1;
   color: var(--highlight-bg);
   transform: translateY(-2px);
+}
+
+/* Dark mode specific hover for better readability */
+body:not(.light-mode) .social-link:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* Projects CTA Button */
