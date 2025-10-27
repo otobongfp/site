@@ -309,6 +309,7 @@ body:not(.light-mode) .profile-link:hover {
     hyphens: none;
     -webkit-hyphens: none;
     -moz-hyphens: none;
+    font-size: 0.95rem;
   }
 }
 
@@ -1945,6 +1946,73 @@ body:not(.light-mode) .social-link:hover {
   }
 
   .project-content p {
+    font-size: 0.85rem;
+  }
+
+  /* Additional mobile adjustments for bio and projects pages */
+  .event-title-clean {
+    font-size: 1rem;
+    word-break: break-word;
+    line-height: 1.3;
+  }
+
+  .event-description-clean {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .content-image {
+    height: 250px;
+  }
+
+  .skill-group {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .skill-group strong {
+    font-size: 0.9rem;
+  }
+
+  .timeline-clean {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-marker-clean {
+    left: -2rem;
+  }
+
+  .timeline-content-clean {
+    padding-left: 0.5rem;
+    word-break: break-word;
+  }
+
+  .timeline-header-clean {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .research-tags {
+    margin-top: 0.25rem;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .tab-navigation {
+    margin: 1.5rem 0;
+  }
+
+  .back-link a {
     font-size: 0.85rem;
   }
 }
