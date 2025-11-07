@@ -268,6 +268,23 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </button>
+
+                <!-- Mobile-only single arrow -->
+                <button
+                  class="carousel-arrow carousel-arrow-mobile"
+                  aria-label="Next project"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
               </div>
 
               <!-- Carousel Indicators -->
@@ -643,10 +660,10 @@
         const indicators = document.querySelectorAll(".carousel-indicator");
         const prevButton = document.querySelector(".carousel-arrow-left");
         const nextButton = document.querySelector(".carousel-arrow-right");
+        const mobileArrow = document.querySelector(".carousel-arrow-mobile");
         const carousel = document.querySelector(".projects-carousel");
         let currentSlide = 0;
         const totalSlides = slides.length;
-        let autoScrollInterval = null;
         let touchStartX = 0;
         let touchEndX = 0;
 
@@ -671,34 +688,11 @@
         function nextSlide() {
           const next = (currentSlide + 1) % totalSlides;
           showSlide(next);
-          resetAutoScroll();
         }
 
         function prevSlide() {
           const prev = (currentSlide - 1 + totalSlides) % totalSlides;
           showSlide(prev);
-          resetAutoScroll();
-        }
-
-        function startAutoScroll() {
-          // Only auto-scroll on mobile
-          if (window.innerWidth <= 768) {
-            autoScrollInterval = setInterval(() => {
-              nextSlide();
-            }, 4000);
-          }
-        }
-
-        function stopAutoScroll() {
-          if (autoScrollInterval) {
-            clearInterval(autoScrollInterval);
-            autoScrollInterval = null;
-          }
-        }
-
-        function resetAutoScroll() {
-          stopAutoScroll();
-          startAutoScroll();
         }
 
         // Arrow button event listeners
@@ -708,12 +702,15 @@
         if (prevButton) {
           prevButton.addEventListener("click", prevSlide);
         }
+        // Mobile arrow (always goes to next, loops endlessly)
+        if (mobileArrow) {
+          mobileArrow.addEventListener("click", nextSlide);
+        }
 
         // Indicator button event listeners
         indicators.forEach((indicator, index) => {
           indicator.addEventListener("click", () => {
             showSlide(index);
-            resetAutoScroll();
           });
         });
 
@@ -732,7 +729,6 @@
             "touchstart",
             function (e) {
               touchStartX = e.changedTouches[0].screenX;
-              stopAutoScroll();
             },
             { passive: true }
           );
@@ -742,7 +738,6 @@
             function (e) {
               touchEndX = e.changedTouches[0].screenX;
               handleSwipe();
-              startAutoScroll();
             },
             { passive: true }
           );
@@ -763,29 +758,9 @@
           }
         }
 
-        // Pause auto-scroll on hover (desktop)
-        if (carousel) {
-          carousel.addEventListener("mouseenter", stopAutoScroll);
-          carousel.addEventListener("mouseleave", function () {
-            if (window.innerWidth > 768) {
-              startAutoScroll();
-            }
-          });
-        }
-
-        // Handle window resize
-        window.addEventListener("resize", function () {
-          if (window.innerWidth <= 768) {
-            startAutoScroll();
-          } else {
-            stopAutoScroll();
-          }
-        });
-
-        // Initialize first slide and start auto-scroll
+        // Initialize first slide
         if (slides.length > 0) {
           showSlide(0);
-          startAutoScroll();
         }
       });
     </script>

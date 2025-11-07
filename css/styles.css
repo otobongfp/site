@@ -1161,8 +1161,9 @@ body:not(.light-mode) .social-link:hover {
 .carousel-slide {
   min-width: 100%;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1);
   display: none;
+  will-change: opacity;
 }
 
 .carousel-slide.active {
@@ -1226,6 +1227,10 @@ body:not(.light-mode) .social-link:hover {
   right: -24px;
 }
 
+.carousel-arrow-mobile {
+  display: none;
+}
+
 .carousel-indicators {
   display: flex;
   justify-content: center;
@@ -1264,8 +1269,47 @@ body:not(.light-mode) .social-link:hover {
     position: relative;
   }
 
-  .carousel-arrow {
+  .carousel-arrow-left {
     display: none;
+  }
+
+  .carousel-arrow-right {
+    display: none;
+  }
+
+  .carousel-arrow-mobile {
+    display: flex;
+    position: absolute;
+    right: 20px;
+    top: calc(130px + 1rem);
+    width: 48px;
+    height: 48px;
+    background: var(--card-bg);
+    border: 2px solid var(--sidebar-border);
+    color: var(--text-color);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px var(--card-shadow);
+  }
+
+  .carousel-arrow-mobile:hover {
+    background: var(--highlight-bg);
+    color: var(--highlight-text);
+    transform: scale(1.1);
+    border-color: var(--highlight-bg);
+  }
+
+  .carousel-arrow-mobile:active {
+    transform: scale(0.95);
+  }
+
+  .carousel-arrow-mobile svg {
+    width: 24px;
+    height: 24px;
   }
 
   .project-screenshot-wrapper {
@@ -1273,7 +1317,7 @@ body:not(.light-mode) .social-link:hover {
   }
 
   .project-screenshot {
-    height: 200px;
+    height: 130px;
   }
 
   .carousel-text-content {
