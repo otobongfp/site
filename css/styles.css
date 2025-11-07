@@ -1143,6 +1143,7 @@ body:not(.light-mode) .social-link:hover {
   position: relative;
   width: 100%;
   margin: 2rem 0;
+  overflow: visible;
 }
 
 .projects-carousel {
@@ -1277,11 +1278,15 @@ body:not(.light-mode) .social-link:hover {
     display: none;
   }
 
+  .projects-carousel-container {
+    overflow: visible;
+  }
+
   .carousel-arrow-mobile {
-    display: flex;
+    display: flex !important;
     position: absolute;
     right: 20px;
-    top: calc(130px + 1rem);
+    top: calc(130px + 0.5rem);
     width: 48px;
     height: 48px;
     background: var(--card-bg);
@@ -1291,9 +1296,12 @@ body:not(.light-mode) .social-link:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 10;
+    z-index: 100;
     transition: all 0.3s ease;
     box-shadow: 0 4px 12px var(--card-shadow);
+    pointer-events: auto;
+    opacity: 1;
+    visibility: visible;
   }
 
   .carousel-arrow-mobile:hover {
