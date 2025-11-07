@@ -66,148 +66,239 @@
               Here's a highlight of some projects I've worked on.
             </p>
 
-            <!-- Projects Section -->
+            <!-- Projects Carousel Section -->
             <section class="projects-section">
+              <div class="projects-carousel-container">
+                <button
+                  class="carousel-arrow carousel-arrow-left"
+                  aria-label="Previous project"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+
+                <div class="projects-carousel">
+                  <div class="carousel-track">
+                    <!-- Kulawise -->
+                    <div class="carousel-slide active">
+                      <div class="carousel-content">
+                        <div class="project-screenshot-wrapper">
+                          <img
+                            src="../assets/images/screenshots/kulawise.png"
+                            alt="Kulawise UI Screenshot"
+                            class="project-screenshot"
+                            onerror="this.parentElement.style.display='none'"
+                          />
+                        </div>
+                        <div class="carousel-text-content">
+                          <div class="project-header-content">
+                            <img
+                              src="../assets/images/projects/kulawise-logo.png"
+                              alt="Kulawise Logo"
+                              class="project-logo"
+                              onerror="this.style.display='none'"
+                            />
+                            <h3 class="event-title-clean">Kulawise</h3>
+                          </div>
+                          <p class="event-description-clean">
+                            AI-powered health intelligence platform that puts
+                            healthy living on auto-pilot with personalized
+                            nutrition recommendations and health tracking. Built
+                            the api with Golang & the AI services in Python, the
+                            platform processes user health data to provide
+                            actionable insights,real-time health monitoring,
+                            personalized dietary recommendations, etc.
+                          </p>
+                          <a
+                            href="https://kulawise.com"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="event-link-clean"
+                            >View Live →</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Fraqtion Finance -->
+                    <div class="carousel-slide">
+                      <div class="carousel-content">
+                        <div class="project-screenshot-wrapper">
+                          <img
+                            src="../assets/images/screenshots/fraqtion.png"
+                            alt="Fraqtion Finance UI Screenshot"
+                            class="project-screenshot"
+                            onerror="this.parentElement.style.display='none'"
+                          />
+                        </div>
+                        <div class="carousel-text-content">
+                          <div class="project-header-content">
+                            <img
+                              src="../assets/images/projects/fraqtion-logo.png"
+                              alt="Fraqtion Finance Logo"
+                              class="project-logo"
+                              onerror="this.style.display='none'"
+                            />
+                            <h3 class="event-title-clean">Fraqtion Finance</h3>
+                          </div>
+                          <p class="event-description-clean">
+                            Fraqtion is a financial technology platform focused
+                            on unlocking Africa's real-world asset economy
+                            through fractional trade finance. It allows
+                            investors to participate in fractions of
+                            revenue-generating assets such as agricultural
+                            exports, minerals, and trade finance pools. Builts
+                            with typescript & rust.
+                          </p>
+                          <a
+                            href="https://fraqtion.finance"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="event-link-clean"
+                            >View Live →</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- RepoLens -->
+                    <div class="carousel-slide">
+                      <div class="carousel-content">
+                        <div class="project-screenshot-wrapper">
+                          <img
+                            src="../assets/images/screenshots/repolens.png"
+                            alt="RepoLens UI Screenshot"
+                            class="project-screenshot"
+                            onerror="this.parentElement.style.display='none'"
+                          />
+                        </div>
+                        <div class="carousel-text-content">
+                          <div class="project-header-content">
+                            <img
+                              src="../assets/images/projects/repolens-logo.png"
+                              alt="RepoLens Logo"
+                              class="project-logo"
+                              onerror="this.style.display='none'"
+                            />
+                            <h3 class="event-title-clean">RepoLens</h3>
+                          </div>
+                          <p class="event-description-clean">
+                            Fullstack AI-powered tool for analyzing code
+                            repositories, and automated matching of requirements
+                            to codebases. Built with typescript & python,
+                            RepoLens uses advanced code analysis & knowledge
+                            graphs to map repository architecture, identify key
+                            components, and match requirements to
+                            implementation, etc
+                          </p>
+                          <a
+                            href="https://repolens.org"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="event-link-clean"
+                            >View Live →</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Lemon Support -->
+                    <div class="carousel-slide">
+                      <div class="carousel-content">
+                        <div class="project-screenshot-wrapper">
+                          <img
+                            src="../assets/images/screenshots/lemon.png"
+                            alt="Lemon Support UI Screenshot"
+                            class="project-screenshot"
+                            onerror="this.parentElement.style.display='none'"
+                          />
+                        </div>
+                        <div class="carousel-text-content">
+                          <div class="project-header-content">
+                            <img
+                              src="../assets/images/projects/lemonsupport-logo.png"
+                              alt="Lemon Support Logo"
+                              class="project-logo"
+                              onerror="this.style.display='none'"
+                            />
+                            <h3 class="event-title-clean">Lemon Support</h3>
+                          </div>
+                          <p class="event-description-clean">
+                            AI-powered support for internal search and knowledge
+                            base management across teams and products, Lemon
+                            Support provides instant, accurate responses to
+                            customer queries. Features include internal search,
+                            knowledge base integration, and CRM synchronization
+                            to enhance team productivity and customer
+                            satisfaction.
+                          </p>
+                          <a
+                            href="https://lemonsupport.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="event-link-clean"
+                            >View Live →</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  class="carousel-arrow carousel-arrow-right"
+                  aria-label="Next project"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Carousel Indicators -->
+              <div class="carousel-indicators">
+                <button
+                  class="carousel-indicator active"
+                  data-slide="0"
+                  aria-label="Go to slide 1"
+                ></button>
+                <button
+                  class="carousel-indicator"
+                  data-slide="1"
+                  aria-label="Go to slide 2"
+                ></button>
+                <button
+                  class="carousel-indicator"
+                  data-slide="2"
+                  aria-label="Go to slide 3"
+                ></button>
+                <button
+                  class="carousel-indicator"
+                  data-slide="3"
+                  aria-label="Go to slide 4"
+                ></button>
+              </div>
+            </section>
+
+            <!-- Services Section -->
+            <section class="services-section" style="margin-top: 4rem">
+              <h2 class="sub-heading">Services</h2>
               <div class="timeline-clean">
-                <!-- 2024 Projects -->
-                <div class="timeline-item-clean">
-                  <div class="timeline-marker-clean"></div>
-                  <div class="timeline-content-clean">
-                    <div class="timeline-header-clean">
-                      <div class="project-header-content">
-                        <img
-                          src="../assets/images/projects/kulawise-logo.png"
-                          alt="Kulawise Logo"
-                          class="project-logo"
-                          onerror="this.style.display='none'"
-                        />
-                        <h3 class="event-title-clean">Kulawise</h3>
-                      </div>
-                    </div>
-                    <p class="event-description-clean">
-                      AI-powered health intelligence platform that puts healthy
-                      living on auto-pilot with personalized nutrition
-                      recommendations and health tracking. Built the api with
-                      Golang & the AI services in Python, the platform processes
-                      user health data to provide actionable insights and
-                      automated tracking. Features include real-time health
-                      monitoring, personalized dietary recommendations, social
-                      support/gamification and seamless integration with fitness
-                      devices.
-                    </p>
-                    <a
-                      href="https://kulawise.com"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="event-link-clean"
-                      >View Live →</a
-                    >
-                  </div>
-                </div>
-
-                <div class="timeline-item-clean">
-                  <div class="timeline-marker-clean"></div>
-                  <div class="timeline-content-clean">
-                    <div class="timeline-header-clean">
-                      <div class="project-header-content">
-                        <img
-                          src="../assets/images/projects/fraqtion-logo.png"
-                          alt="Fraqtion Finance Logo"
-                          class="project-logo"
-                          onerror="this.style.display='none'"
-                        />
-                        <h3 class="event-title-clean">Fraqtion Finance</h3>
-                      </div>
-                    </div>
-                    <p class="event-description-clean">
-                      Real World Assets tokenization & participation gateway
-                      focused on Africa, enabling businesses to tokenize assets
-                      on-chain while users participate using stablecoins & NFTs
-                      through seamless dashboard/wallet experiences. Built on
-                      Base L2, with backend/services/contracts written in Rust &
-                      Typescript, featuring secure multi-signature governance,
-                      and real-time asset tracking. The platform bridges
-                      traditional finance with DeFi, enabling fractional
-                      ownership of assets across the continent with transparent,
-                      on-chain verification.
-                    </p>
-                    <a
-                      href="https://fraqtion.finance"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="event-link-clean"
-                      >View Live →</a
-                    >
-                  </div>
-                </div>
-
-                <div class="timeline-item-clean">
-                  <div class="timeline-marker-clean"></div>
-                  <div class="timeline-content-clean">
-                    <div class="timeline-header-clean">
-                      <div class="project-header-content">
-                        <img
-                          src="../assets/images/projects/repolens-logo.png"
-                          alt="RepoLens Logo"
-                          class="project-logo"
-                          onerror="this.style.display='none'"
-                        />
-                        <h3 class="event-title-clean">RepoLens</h3>
-                      </div>
-                    </div>
-                    <p class="event-description-clean">
-                      Fullstack AI-powered tool for analyzing code repositories,
-                      helping developers explore project structures and
-                      understand complex codebases faster. Built with Next.js
-                      and LangChain integration, RepoLens uses advanced code
-                      analysis to map repository architecture, identify key
-                      components, and match requirements to implementation.
-                      Features include intelligent code search, dependency
-                      visualization, and natural language queries to navigate
-                      large codebases with ease.
-                    </p>
-                    <a
-                      href="https://repolens.org"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="event-link-clean"
-                      >View Live →</a
-                    >
-                  </div>
-                </div>
-
-                <div class="timeline-item-clean">
-                  <div class="timeline-marker-clean"></div>
-                  <div class="timeline-content-clean">
-                    <div class="timeline-header-clean">
-                      <div class="project-header-content">
-                        <img
-                          src="../assets/images/projects/lemonsupport-logo.png"
-                          alt="Lemon Support Logo"
-                          class="project-logo"
-                          onerror="this.style.display='none'"
-                        />
-                        <h3 class="event-title-clean">Lemon Support</h3>
-                      </div>
-                    </div>
-                    <p class="event-description-clean">
-                      AI-powered support for internal search and knowledge base
-                      management across teams and products, Lemon Support
-                      provides instant, accurate responses to customer queries.
-                      Features include internal search, knowledge base
-                      integration, and CRM synchronization to enhance team
-                      productivity and customer satisfaction.
-                    </p>
-                    <a
-                      href="https://lemonsupport.app"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="event-link-clean"
-                      >View Live →</a
-                    >
-                  </div>
-                </div>
-
                 <div class="timeline-item-clean">
                   <div class="timeline-marker-clean"></div>
                   <div class="timeline-content-clean">
@@ -276,7 +367,6 @@
                   </div>
                 </div>
 
-                <!-- 2022 Projects -->
                 <div class="timeline-item-clean">
                   <div class="timeline-marker-clean"></div>
                   <div class="timeline-content-clean">
@@ -310,40 +400,6 @@
                     >
                   </div>
                 </div>
-
-                <!-- 2019 Projects -->
-                <!-- <div class="timeline-item-clean">
-                  <div class="timeline-marker-clean"></div>
-                  <div class="timeline-content-clean">
-                    <div class="timeline-header-clean">
-                      <div class="project-header-content">
-                        <img
-                          src="../assets/images/projects/smartlock-logo.png"
-                          alt="Smart Door Lock Logo"
-                          class="project-logo"
-                          onerror="this.style.display='none'"
-                        />
-                        <h3 class="event-title-clean">Smart Door Lock</h3>
-                      </div>
-                    </div>
-                    <p class="event-description-clean">
-                      Undergraduate thesis project: Facial recognition-based
-                      smart door lock system using microcontrollers and IoT
-                      technology - my first exploration into intelligent
-                      systems. Developed a complete embedded solution using
-                      Arduino microcontrollers, Python for facial recognition
-                      processing, and IoT sensors for automated access control.
-                      Implemented real-time facial recognition algorithms,
-                      secure authentication mechanisms, and remote monitoring
-                      capabilities through a web interface, demonstrating
-                      practical application of computer vision and IoT
-                      technologies.
-                    </p>
-                    <span class="event-link-clean disabled"
-                      >Academic Project</span
-                    >
-                  </div>
-                </div> -->
               </div>
             </section>
           </div>
@@ -577,6 +633,160 @@
             }
           });
         });
+      });
+    </script>
+
+    <!-- Carousel Functionality -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll(".carousel-slide");
+        const indicators = document.querySelectorAll(".carousel-indicator");
+        const prevButton = document.querySelector(".carousel-arrow-left");
+        const nextButton = document.querySelector(".carousel-arrow-right");
+        const carousel = document.querySelector(".projects-carousel");
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+        let autoScrollInterval = null;
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        function showSlide(index) {
+          // Remove active class from all slides and indicators
+          slides.forEach((slide) => slide.classList.remove("active"));
+          indicators.forEach((indicator) =>
+            indicator.classList.remove("active")
+          );
+
+          // Add active class to current slide and indicator
+          if (slides[index]) {
+            slides[index].classList.add("active");
+          }
+          if (indicators[index]) {
+            indicators[index].classList.add("active");
+          }
+
+          currentSlide = index;
+        }
+
+        function nextSlide() {
+          const next = (currentSlide + 1) % totalSlides;
+          showSlide(next);
+          resetAutoScroll();
+        }
+
+        function prevSlide() {
+          const prev = (currentSlide - 1 + totalSlides) % totalSlides;
+          showSlide(prev);
+          resetAutoScroll();
+        }
+
+        function startAutoScroll() {
+          // Only auto-scroll on mobile
+          if (window.innerWidth <= 768) {
+            autoScrollInterval = setInterval(() => {
+              nextSlide();
+            }, 4000);
+          }
+        }
+
+        function stopAutoScroll() {
+          if (autoScrollInterval) {
+            clearInterval(autoScrollInterval);
+            autoScrollInterval = null;
+          }
+        }
+
+        function resetAutoScroll() {
+          stopAutoScroll();
+          startAutoScroll();
+        }
+
+        // Arrow button event listeners
+        if (nextButton) {
+          nextButton.addEventListener("click", nextSlide);
+        }
+        if (prevButton) {
+          prevButton.addEventListener("click", prevSlide);
+        }
+
+        // Indicator button event listeners
+        indicators.forEach((indicator, index) => {
+          indicator.addEventListener("click", () => {
+            showSlide(index);
+            resetAutoScroll();
+          });
+        });
+
+        // Keyboard navigation
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "ArrowLeft") {
+            prevSlide();
+          } else if (e.key === "ArrowRight") {
+            nextSlide();
+          }
+        });
+
+        // Touch/Swipe functionality for mobile
+        if (carousel) {
+          carousel.addEventListener(
+            "touchstart",
+            function (e) {
+              touchStartX = e.changedTouches[0].screenX;
+              stopAutoScroll();
+            },
+            { passive: true }
+          );
+
+          carousel.addEventListener(
+            "touchend",
+            function (e) {
+              touchEndX = e.changedTouches[0].screenX;
+              handleSwipe();
+              startAutoScroll();
+            },
+            { passive: true }
+          );
+        }
+
+        function handleSwipe() {
+          const swipeThreshold = 50; // Minimum distance for a swipe
+          const diff = touchStartX - touchEndX;
+
+          if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+              // Swipe left - next slide
+              nextSlide();
+            } else {
+              // Swipe right - previous slide
+              prevSlide();
+            }
+          }
+        }
+
+        // Pause auto-scroll on hover (desktop)
+        if (carousel) {
+          carousel.addEventListener("mouseenter", stopAutoScroll);
+          carousel.addEventListener("mouseleave", function () {
+            if (window.innerWidth > 768) {
+              startAutoScroll();
+            }
+          });
+        }
+
+        // Handle window resize
+        window.addEventListener("resize", function () {
+          if (window.innerWidth <= 768) {
+            startAutoScroll();
+          } else {
+            stopAutoScroll();
+          }
+        });
+
+        // Initialize first slide and start auto-scroll
+        if (slides.length > 0) {
+          showSlide(0);
+          startAutoScroll();
+        }
       });
     </script>
   </body>
