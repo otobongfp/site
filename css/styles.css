@@ -1838,6 +1838,7 @@ body:not(.light-mode) .social-link:hover {
   border: 4px solid var(--highlight-bg);
   box-shadow: 0 8px 20px var(--card-shadow);
   transition: transform 0.3s ease;
+  filter: grayscale(100%);
 }
 
 .profile-img:hover {
