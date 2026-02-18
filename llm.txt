@@ -1,7 +1,7 @@
 # Otobong Peter - Software Engineer & Researcher
 
 ## Professional Summary
-Otobong Peter is a software engineer and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
+Otobong Peter is a software engineer, product leader and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
 
 ## Core Expertise Areas
 - Products: Product strategy, user research, agile methodologies, roadmap planning, stakeholder management
@@ -75,9 +75,6 @@ Real-world asset tokenization platform focused on Africa, enabling businesses to
 
 ### RepoLens (2025)
 Fullstack AI-powered tool for analyzing code repositories, helping developers explore project structures and understand complex codebases faster. Features matching requirements to codebases using local ASTs and LLMs.
-
-### Lemon Support (2025)
-AI-powered customer support and sales automation platform with intelligent responses and streamlined customer interactions.
 
 ### Ownables CLI (2023)
 Comprehensive CLI tool for building ownables on the LTO Layer-1 blockchain with easy-to-use commands for creating and managing digital assets.
