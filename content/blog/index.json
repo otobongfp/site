@@ -1,0 +1,10 @@
+[
+  {
+    "slug": "welcome",
+    "title": "Welcome to My Blog",
+    "date": "2026-04-30",
+    "author": "Otobong Peter",
+    "excerpt": "Why I am writing more publicly about systems, product engineering, and building with AI.",
+    "file": "../content/blog/welcome.md"
+  }
+]

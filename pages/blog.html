@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - Otobong Peter</title>
+    <meta
+      name="description"
+      content="Thoughts, essays, and technical writing by Otobong Peter."
+    />
+    <meta name="author" content="Otobong Peter" />
+    <link rel="canonical" href="https://otobongfp.com/blog" />
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <section class="profile-header blog-header">
+        <div class="profile-info">
+          <h1 class="name">Blog</h1>
+          <p class="role">Writing on systems and technology</p>
+        </div>
+      </section>
+
+      <div class="content">
+        <div class="back-link">
+          <a href="../index.html" class="pre-underline">← Back to Home</a>
+        </div>
+
+        <div style="margin-bottom: 2rem">
+          <img
+            src="../assets/images/adam.png"
+            alt="The Creation of Adam"
+            class="content-image"
+            style="width: 100%; height: auto; max-height: 260px; object-fit: cover"
+          />
+        </div>
+
+        <div id="blog-list" class="blog-list" aria-live="polite">
+          <p class="event-description-clean">Loading posts...</p>
+        </div>
+      </div>
+
+      <div id="footer">
+        <p>©2025 Otobong Peter</p>
+      </div>
+
+      <button id="darkModeToggle" class="dark-mode-toggle sound-button">
+        <svg
+          class="mode-icon sun-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg
+          class="mode-icon moon-icon"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+      </button>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/sounds.js"></script>
+    <script src="../js/blog.js"></script>
+    <script>
+      function updateModeIcon(isLight) {
+        const sunIcon = document.querySelector(".sun-icon");
+        const moonIcon = document.querySelector(".moon-icon");
+        if (sunIcon && moonIcon) {
+          sunIcon.style.display = isLight ? "block" : "none";
+          moonIcon.style.display = isLight ? "none" : "block";
+        }
+      }
+
+      const SESSION_KEYS = {
+        THEME_MODE: "themeMode",
+      };
+
+      function restoreThemeMode() {
+        const savedTheme = sessionStorage.getItem(SESSION_KEYS.THEME_MODE);
+        if (savedTheme === "light") {
+          document.body.classList.add("light-mode");
+        }
+      }
+
+      function saveThemeMode(isLight) {
+        sessionStorage.setItem(
+          SESSION_KEYS.THEME_MODE,
+          isLight ? "light" : "dark",
+        );
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        restoreThemeMode();
+        const savedTheme = sessionStorage.getItem(SESSION_KEYS.THEME_MODE);
+        const isLight =
+          savedTheme === "light" ||
+          (!savedTheme &&
+            window.matchMedia("(prefers-color-scheme: light)").matches);
+        updateModeIcon(isLight);
+      });
+
+      document
+        .getElementById("darkModeToggle")
+        .addEventListener("click", function () {
+          const isLight = document.body.classList.toggle("light-mode");
+          saveThemeMode(isLight);
+          updateModeIcon(isLight);
+        });
+    </script>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 # Otobong Peter - Software Engineer & Researcher
 
 ## Professional Summary
-Otobong Peter is a software engineer, product leader and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
+Otobong Peter is a software engineer, AI systems expert and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
 
 ## Core Expertise Areas
 - Products: Product strategy, user research, agile methodologies, roadmap planning, stakeholder management
