@@ -4,19 +4,34 @@
   function formatDate(dateString) {
     const date = new Date(dateString);
     if (Number.isNaN(date.getTime())) return dateString;
-    return date.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    });
+    const day = date.getDate();
+    const month = date.toLocaleDateString("en-US", { month: "long" });
+    const year = date.getFullYear();
+
+    function getOrdinalSuffix(value) {
+      if (value > 3 && value < 21) return "th";
+      switch (value % 10) {
+        case 1:
+          return "st";
+        case 2:
+          return "nd";
+        case 3:
+          return "rd";
+        default:
+          return "th";
+      }
+    }
+
+    return `${day}${getOrdinalSuffix(day)} ${month}, ${year}`;
   }
 
   function createPostCard(post) {
     return `
       <article class="blog-card">
         <h2 class="blog-card-title">
-          <a href="./blog-post.html?slug=${encodeURIComponent(post.slug)}"><span class="blog-card-date">${formatDate(post.date)} - </span><span class="blog-card-topic">${post.title}</span></a>
+          <a href="./blog-post.html?slug=${encodeURIComponent(post.slug)}"><span class="blog-card-topic">${post.title}</span></a>
         </h2>
+        <p class="blog-card-dateline">${formatDate(post.date)}</p>
       </article>
     `;
   }
