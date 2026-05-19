@@ -111,7 +111,7 @@ Led the Google Developer Student Club at Rivers State University, focusing on de
 - Active in OpenForge community leadership
 
 ## Education & Background
-- M.Sc. in Software Engineering (in progress)
+- M.Sc. in Software Engineering
 - Undergraduate degree with thesis in intelligent systems
 - Started technical career in 2019 as hardware intern working with microcontrollers and IoT systems
 - Early interest in blending software with physical systems

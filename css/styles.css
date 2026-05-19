@@ -132,6 +132,7 @@ a:focus {
 
 .profile-header .profile-info .name,
 .profile-header .profile-info .role,
+.profile-header .profile-info .bio-education,
 .profile-header .profile-info .research-focus {
   text-align: left;
 }
@@ -165,6 +166,15 @@ a:focus {
   margin: 0.3rem 0 0 0;
   font-weight: 600;
   opacity: 0.8;
+}
+
+.bio-education {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin: 0.35rem 0 0 0;
+  font-weight: 500;
+  opacity: 0.85;
+  text-align: left;
 }
 
 .profile-links {
