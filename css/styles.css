@@ -2028,6 +2028,103 @@ body:not(.light-mode) .social-link:hover {
   padding: 0.9rem;
 }
 
+/* Business card page (/card) */
+.card-page {
+  max-width: 640px;
+  margin-top: 2.5rem;
+}
+
+.card-page .content {
+  margin-bottom: 2rem;
+}
+
+.card-hero {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.card-name {
+  margin: 0 0 0.35rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  text-align: left;
+}
+
+.card-tagline {
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.card-lead {
+  margin: 0 0 2rem;
+  line-height: 1.65;
+  text-align: left;
+}
+
+.card-section-title {
+  margin: 0 0 1.25rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.card-venture {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--sidebar-border);
+}
+
+.card-venture:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.card-venture-name {
+  margin: 0 0 0.15rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.card-venture-name a:hover {
+  color: var(--highlight-bg);
+  text-decoration: none;
+}
+
+.card-venture-url {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.card-venture-desc {
+  margin: 0;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.card-contact {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--sidebar-border);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.card-contact-link {
+  opacity: 0.85;
+}
+
+.card-contact-sep {
+  margin: 0 0.35rem;
+  opacity: 0.45;
+}
+
 /* Social Links */
 .social-links {
   display: flex;
@@ -2455,6 +2552,36 @@ body:not(.light-mode) .social-link:hover {
 
   .blog-card-dateline {
     font-size: 11px;
+  }
+
+  .card-page {
+    margin-top: 1.5rem;
+  }
+
+  .card-name {
+    font-size: 1.5rem;
+  }
+
+  .card-tagline,
+  .card-lead,
+  .card-venture-desc {
+    font-size: 13px;
+  }
+
+  .card-venture-url {
+    font-size: 11px;
+  }
+
+  .card-contact {
+    font-size: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.25rem 0.5rem;
+  }
+
+  .card-contact-sep {
+    display: none;
   }
 
   .dark-mode-toggle {
