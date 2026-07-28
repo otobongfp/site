@@ -1,5 +1,13 @@
 [
   {
+    "slug": "local-and-sovereign-ai",
+    "title": "The Case for Local and Sovereign AI",
+    "date": "2026-07-28",
+    "author": "Otobong Peter",
+    "excerpt": "For the last few years, \"using AI\" has quietly become synonymous with \"sending your data to someone else's server.\" Every prompt, every document, every half-formed idea you type into a chat box travels over the network...",
+    "file": "../content/blog/local-and-sovereign-ai.md"
+  },
+  {
     "slug": "27",
     "title": "27",
     "date": "2026-05-09",
