@@ -2076,6 +2076,16 @@ body:not(.light-mode) .social-link:hover {
   text-align: left;
 }
 
+.card-cta {
+  margin: 0 0 2rem;
+}
+
+.card-section {
+  margin-top: 2rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--sidebar-border);
+}
+
 .card-section-title {
   margin: 0 0 1.25rem;
   font-size: 1rem;
@@ -2083,6 +2093,30 @@ body:not(.light-mode) .social-link:hover {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   opacity: 0.85;
+}
+
+.card-section-text {
+  margin: 0 0 1.25rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.card-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.card-arrow-link {
+  font-weight: 600;
+}
+
+.card-arrow-link:hover {
+  color: var(--highlight-bg);
+}
+
+.card-email {
+  margin: 0 0 1rem;
 }
 
 .card-venture {
