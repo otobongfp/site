@@ -3,7 +3,7 @@
  * Manages views, interactions, drag-and-drop, timer, command palette, and modals.
  */
 
-import { projectsRepo, tasksRepo, sessionsRepo, thoughtsRepo } from './repositories.js';
+import { projectsRepo, tasksRepo, sessionsRepo, thoughtsRepo, backupRepo } from './repositories.js';
 import { p2pSync } from './p2p-sync.js';
 
 class MindShieldApp {
@@ -197,7 +197,7 @@ class MindShieldApp {
             ? `<button class="ms-btn-continue" data-action="open-focus" data-id="${task.id}">Continue</button>`
             : `<button class="ms-btn-start" data-action="start-task" data-id="${task.id}">Start</button>`
           }
-          <button class="ms-icon-btn" data-action="edit-task" data-id="${task.id}" title="Edit Task">✎</button>
+          <button class="ms-icon-btn" data-action="edit-task" data-id="${task.id}" title="Edit Task"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
         </div>
       </div>
     `;
@@ -359,13 +359,13 @@ class MindShieldApp {
 
         <div class="ms-focus-controls">
           <button class="ms-btn-secondary" id="focus-capture-btn">
-            ⚡ Capture Thought <span class="ms-kbd-hint">⌘K</span>
+            Capture Thought <span class="ms-kbd-hint">⌘K</span>
           </button>
           <button class="ms-btn-secondary" id="focus-pause-btn">
-            ⏸ Pause Task
+            Pause Task
           </button>
           <button class="ms-btn-primary" id="focus-finish-btn">
-            ✓ Finish Task
+            Finish Task
           </button>
         </div>
       </div>
@@ -461,13 +461,13 @@ class MindShieldApp {
             </div>
             <div class="ms-thought-actions">
               <button class="ms-btn-primary" style="font-size:0.75rem;padding:6px 10px;" data-action="convert-thought" data-id="${th.id}">
-                → Convert to Task
+                Convert to Task
               </button>
               <button class="ms-icon-btn" data-action="resolve-thought" data-id="${th.id}" title="Mark Resolved">
-                ✓
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
               </button>
               <button class="ms-btn-danger" data-action="delete-thought" data-id="${th.id}" title="Delete">
-                ✕
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
               </button>
             </div>
           </div>
@@ -885,11 +885,22 @@ class MindShieldApp {
           if (status === 'connected') {
             statusEl.textContent = 'Device connected! Syncing...';
           } else if (status === 'sync_success') {
-            statusEl.textContent = '✓ Sync Complete!';
+            statusEl.textContent = 'Sync complete';
             await this.refreshState();
           }
         }
       );
+    });
+
+    // 5. Destructive Cleanup
+    document.getElementById('btn-reset-db')?.addEventListener('click', async () => {
+      if (confirm('Are you sure you want to permanently clear all local data and reset default compartments? This action cannot be undone.')) {
+        await backupRepo.clearAllData();
+        this.closeAllModals();
+        await this.refreshState();
+        this.switchScreen('today');
+        alert('Database cleared and reset.');
+      }
     });
   }
 

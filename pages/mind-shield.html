@@ -30,7 +30,7 @@
 
         <div class="ms-header-actions">
           <button class="ms-icon-btn" id="header-capture-btn" title="Quick Distraction Capture" onclick="window.mindShieldApp?.openCommandPalette()">
-            ⚡ Capture <span class="ms-kbd-hint">⌘K</span>
+            Capture <span class="ms-kbd-hint">⌘K</span>
           </button>
           <button class="ms-btn-primary" id="header-add-task-btn" onclick="window.mindShieldApp?.openTaskModal()">
             + Task
@@ -159,7 +159,6 @@
   <div class="ms-modal-backdrop" id="modal-palette">
     <div class="ms-modal ms-palette-modal">
       <div class="ms-palette-input-wrap">
-        <span style="color:var(--ms-accent);font-size:1.2rem;margin-right:10px;">⚡</span>
         <input 
           type="text" 
           class="ms-palette-input" 
@@ -312,7 +311,7 @@
       <form id="form-project">
         <div class="ms-form-group">
           <label class="ms-form-label" for="project-name-input">Project Name</label>
-          <input type="text" class="ms-input" id="project-name-input" placeholder="e.g. Esca, Kulawise, 1024" required />
+          <input type="text" class="ms-input" id="project-name-input" placeholder="e.g. Infrastructure, Mobile App, Research" required />
         </div>
         <div class="ms-modal-footer">
           <button type="button" class="ms-btn-secondary" data-close-modal>Cancel</button>
@@ -339,7 +338,7 @@
           </p>
           <div id="qr-snapshot-container" style="display:flex;justify-content:center;padding:10px;background:#ffffff;border-radius:6px;max-width:260px;margin:0 auto 12px;"></div>
           <div style="display:flex;justify-content:center;gap:10px;">
-            <button class="ms-btn-secondary" style="font-size:0.8rem;" id="btn-import-qr-string">📥 Import Scanned QR Code</button>
+            <button class="ms-btn-secondary" style="font-size:0.8rem;" id="btn-import-qr-string">Import Scanned QR Code</button>
           </div>
         </div>
 
@@ -365,6 +364,15 @@
             <button class="ms-btn-secondary" style="font-size:0.8rem;" id="btn-import-json-trigger">Import .json</button>
             <input type="file" id="import-json-file" accept=".json" style="display:none;" />
           </div>
+        </div>
+
+        <!-- Option 4: Destructive Cleanup -->
+        <div style="background:rgba(239,68,68,0.06);border:1px solid rgba(239,68,68,0.25);padding:16px;border-radius:var(--ms-radius-md);display:flex;justify-content:space-between;align-items:center;">
+          <div>
+            <div style="font-weight:600;color:var(--ms-danger, #ef4444);">Destructive Cleanup</div>
+            <div style="font-size:0.75rem;color:var(--ms-text-muted);">Clear all local data and reset default compartments</div>
+          </div>
+          <button class="ms-btn-danger" style="font-size:0.8rem;" id="btn-reset-db">Reset Database</button>
         </div>
       </div>
 

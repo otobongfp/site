@@ -69,8 +69,8 @@ export const projectsRepo = {
     const defaults = ['Personal', 'Work', 'Side Projects', 'Learning & Research', 'Admin / Ops'];
     const existing = await db.projects.toArray();
     
-    // Clean up legacy unused projects (Mindshare, Esca, 1024, etc.) if they have no tasks
-    const legacyNames = new Set(['mindshare', 'esca', '1024', 'ideas', 'deep work']);
+    // Clean up legacy unused projects (Mindshare, Esca, Kulawise, 1024, etc.) if they have no tasks
+    const legacyNames = new Set(['mindshare', 'esca', 'kulawise', '1024', 'ideas', 'deep work']);
     for (const p of existing) {
       if (legacyNames.has(p.name.toLowerCase())) {
         const taskCount = await db.tasks.where('projectId').equals(p.id).count();
@@ -481,6 +481,19 @@ export const backupRepo = {
       }
     });
 
+    return true;
+  },
+
+  async clearAllData() {
+    await db.transaction('rw', [db.projects, db.tasks, db.focusSessions, db.thoughts], async () => {
+      await db.projects.clear();
+      await db.tasks.clear();
+      await db.focusSessions.clear();
+      await db.thoughts.clear();
+    });
+
+    // Re-seed clean standard default compartments
+    await projectsRepo.seedDefaultsIfEmpty();
     return true;
   }
 };
