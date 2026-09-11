@@ -1,0 +1,1098 @@
+/* ==========================================================================
+   MIND SHIELD - DESIGN SYSTEM & STYLES
+   Aesthetic: Calm, Minimal, Fast, Spacious, Quiet, Focused
+   Ultra-responsive with Native-feeling Mobile Touch Ergonomics
+   ========================================================================== */
+
+:root {
+  --ms-bg: #0c0d10;
+  --ms-bg-subtle: #14151b;
+  --ms-card-bg: #181921;
+  --ms-card-hover: #20222c;
+  --ms-border: #282a36;
+  --ms-border-subtle: #1e2029;
+  --ms-border-focus: #7fffd4;
+
+  --ms-text: #f4f6fa;
+  --ms-text-muted: #8e95a5;
+  --ms-text-faint: #5a6072;
+
+  --ms-accent: #7fffd4;
+  --ms-accent-bg: rgba(127, 255, 212, 0.1);
+  --ms-accent-hover: #6ae6be;
+
+  --ms-p0: #ff6565;
+  --ms-p0-bg: rgba(255, 101, 101, 0.12);
+  --ms-p1: #7fffd4;
+  --ms-p1-bg: rgba(127, 255, 212, 0.12);
+  --ms-p2: #9aa0b0;
+  --ms-p2-bg: rgba(154, 160, 176, 0.12);
+
+  --ms-urgency-now: #ffb86c;
+  --ms-urgency-now-bg: rgba(255, 184, 108, 0.12);
+
+  --ms-radius-sm: 6px;
+  --ms-radius-md: 10px;
+  --ms-radius-lg: 16px;
+
+  --ms-font-mono: 'IBM Plex Mono', monospace, -apple-system, BlinkMacSystemFont, sans-serif;
+  --ms-font-pixel: 'Pixelify Sans', 'IBM Plex Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html, body {
+  touch-action: manipulation;
+  overscroll-behavior-y: none;
+}
+
+body.mind-shield-body {
+  background-color: var(--ms-bg);
+  color: var(--ms-text);
+  font-family: var(--ms-font-mono);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  line-height: 1.6;
+  font-size: 14px;
+  overflow-x: hidden;
+}
+
+/* App Wrapper */
+.ms-app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 32px 24px 100px;
+}
+
+/* ==========================================================================
+   HEADER & NAVIGATION
+   ========================================================================== */
+.ms-header {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--ms-border);
+  margin-bottom: 32px;
+}
+
+.ms-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ms-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  color: var(--ms-text);
+  text-decoration: none;
+}
+
+.ms-logo-badge {
+  color: var(--ms-accent);
+  background: var(--ms-accent-bg);
+  padding: 3px 10px;
+  border-radius: var(--ms-radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid rgba(127, 255, 212, 0.25);
+  letter-spacing: 1px;
+}
+
+.ms-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Navigation Tabs Bar */
+.ms-nav {
+  display: flex;
+  gap: 8px;
+  background: var(--ms-bg-subtle);
+  padding: 6px;
+  border-radius: var(--ms-radius-md);
+  border: 1px solid var(--ms-border);
+  width: 100%;
+}
+
+.ms-nav-btn {
+  flex: 1;
+  background: transparent;
+  border: none;
+  color: var(--ms-text-muted);
+  font-family: var(--ms-font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 10px 16px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+}
+
+.ms-nav-btn:hover {
+  color: var(--ms-text);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.ms-nav-btn:active {
+  transform: scale(0.96);
+}
+
+.ms-nav-btn.active {
+  color: #0b0c0e;
+  background: var(--ms-accent);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(127, 255, 212, 0.25);
+}
+
+.ms-nav-count {
+  background: rgba(0, 0, 0, 0.2);
+  color: inherit;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.ms-nav-btn.active .ms-nav-count {
+  background: rgba(0, 0, 0, 0.25);
+  color: #000;
+}
+
+/* ==========================================================================
+   BUTTONS & TACTILE CONTROLS
+   ========================================================================== */
+.ms-icon-btn {
+  background: var(--ms-bg-subtle);
+  border: 1px solid var(--ms-border);
+  color: var(--ms-text-muted);
+  padding: 9px 15px;
+  border-radius: var(--ms-radius-sm);
+  font-family: var(--ms-font-mono);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 38px;
+}
+
+.ms-icon-btn:hover {
+  color: var(--ms-text);
+  border-color: var(--ms-text-muted);
+  background: var(--ms-card-bg);
+}
+
+.ms-icon-btn:active,
+.ms-btn-primary:active,
+.ms-btn-secondary:active,
+.ms-btn-start:active,
+.ms-btn-continue:active {
+  transform: scale(0.96);
+}
+
+.ms-kbd-hint {
+  font-size: 0.7rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--ms-text-muted);
+}
+
+.ms-btn-primary {
+  background: var(--ms-accent);
+  color: #0b0c0e;
+  border: none;
+  font-family: var(--ms-font-mono);
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.ms-btn-primary:hover {
+  background: var(--ms-accent-hover);
+  box-shadow: 0 0 14px rgba(127, 255, 212, 0.4);
+}
+
+.ms-btn-secondary {
+  background: var(--ms-bg-subtle);
+  color: var(--ms-text);
+  border: 1px solid var(--ms-border);
+  font-family: var(--ms-font-mono);
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 40px;
+}
+
+.ms-btn-secondary:hover {
+  border-color: var(--ms-text-muted);
+  background: var(--ms-card-bg);
+}
+
+.ms-btn-danger {
+  background: transparent;
+  color: var(--ms-p0);
+  border: 1px solid rgba(255, 101, 101, 0.3);
+  font-family: var(--ms-font-mono);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 38px;
+}
+
+.ms-btn-danger:hover {
+  background: var(--ms-p0-bg);
+  border-color: var(--ms-p0);
+}
+
+/* ==========================================================================
+   SCREENS & SECTIONS
+   ========================================================================== */
+.ms-screen {
+  display: none;
+  animation: msFadeIn 0.2s ease;
+}
+
+.ms-screen.active {
+  display: block;
+}
+
+@keyframes msFadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.ms-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.ms-section-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--ms-text-muted);
+}
+
+.ms-group-title {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--ms-text-muted);
+  margin: 36px 0 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ms-group-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--ms-border);
+}
+
+.ms-group-title.group-now {
+  color: var(--ms-accent);
+}
+
+/* ==========================================================================
+   TASK CARDS & EXECUTION LIST
+   ========================================================================== */
+.ms-task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 48px;
+}
+
+.ms-task-card {
+  background: var(--ms-card-bg);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  cursor: grab;
+  position: relative;
+  user-select: none;
+}
+
+.ms-task-card:hover {
+  border-color: rgba(127, 255, 212, 0.4);
+  background: var(--ms-card-hover);
+}
+
+.ms-task-card.is-active-task {
+  border-color: var(--ms-accent);
+  background: linear-gradient(135deg, rgba(127, 255, 212, 0.06), var(--ms-card-bg));
+  box-shadow: 0 4px 20px rgba(127, 255, 212, 0.12);
+}
+
+.ms-task-card.is-dragging {
+  opacity: 0.4;
+  border: 1px dashed var(--ms-accent);
+}
+
+.ms-task-card.drag-over {
+  border-top: 3px solid var(--ms-accent);
+  transform: translateY(-2px);
+}
+
+.ms-task-seq {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ms-text-muted);
+  width: 34px;
+  text-align: right;
+  flex-shrink: 0;
+  letter-spacing: -0.5px;
+}
+
+.ms-task-card.is-active-task .ms-task-seq {
+  color: var(--ms-accent);
+}
+
+.ms-task-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.ms-task-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--ms-text);
+  margin-bottom: 8px;
+  word-break: break-word;
+  line-height: 1.4;
+}
+
+.ms-task-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  font-size: 0.75rem;
+}
+
+.ms-badge {
+  padding: 3px 9px;
+  border-radius: var(--ms-radius-sm);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  font-size: 0.72rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+.badge-p0 { color: var(--ms-p0); background: var(--ms-p0-bg); border: 1px solid rgba(255, 101, 101, 0.25); }
+.badge-p1 { color: var(--ms-p1); background: var(--ms-p1-bg); border: 1px solid rgba(127, 255, 212, 0.25); }
+.badge-p2 { color: var(--ms-p2); background: var(--ms-p2-bg); border: 1px solid rgba(154, 160, 176, 0.25); }
+
+.badge-urgency {
+  color: var(--ms-text-muted);
+  background: var(--ms-bg-subtle);
+  border: 1px solid var(--ms-border);
+}
+
+.badge-urgency.urgency-NOW {
+  color: var(--ms-urgency-now);
+  background: var(--ms-urgency-now-bg);
+  border-color: rgba(255, 184, 108, 0.35);
+}
+
+.badge-project {
+  color: var(--ms-text-muted);
+  background: transparent;
+  border: 1px solid var(--ms-border);
+}
+
+.ms-task-context-preview {
+  font-size: 0.8rem;
+  color: var(--ms-accent);
+  margin-top: 8px;
+  background: rgba(127, 255, 212, 0.06);
+  padding: 6px 12px;
+  border-radius: var(--ms-radius-sm);
+  border-left: 3px solid var(--ms-accent);
+}
+
+.ms-task-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.ms-btn-seq-move {
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  min-height: 36px;
+}
+
+.ms-btn-start {
+  background: transparent;
+  color: var(--ms-accent);
+  border: 1px solid var(--ms-accent);
+  font-family: var(--ms-font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 38px;
+}
+
+.ms-btn-start:hover {
+  background: var(--ms-accent);
+  color: #0b0c0e;
+  box-shadow: 0 0 12px rgba(127, 255, 212, 0.35);
+}
+
+.ms-btn-continue {
+  background: var(--ms-accent);
+  color: #0b0c0e;
+  border: 1px solid var(--ms-accent);
+  font-family: var(--ms-font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 18px;
+  border-radius: var(--ms-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  min-height: 38px;
+}
+
+.ms-btn-continue:hover {
+  background: var(--ms-accent-hover);
+  box-shadow: 0 0 12px rgba(127, 255, 212, 0.35);
+}
+
+/* Empty States */
+.ms-empty-state {
+  text-align: center;
+  padding: 60px 24px;
+  color: var(--ms-text-muted);
+  border: 1px dashed var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  margin: 20px 0;
+}
+
+.ms-empty-state p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   FOCUS VIEW - Calm, Spacious, No Noise
+   ========================================================================== */
+.ms-focus-container {
+  max-width: 700px;
+  margin: 24px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.ms-focus-project {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  color: var(--ms-text-muted);
+}
+
+.ms-focus-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--ms-text);
+  letter-spacing: -0.5px;
+  margin: 12px 0 18px;
+  max-width: 100%;
+  word-break: break-word;
+}
+
+.ms-focus-badges {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+/* Next Action Box */
+.ms-focus-action-box {
+  width: 100%;
+  background: var(--ms-card-bg);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  padding: 20px;
+  text-align: left;
+  transition: border-color 0.15s ease;
+}
+
+.ms-focus-action-box:focus-within {
+  border-color: var(--ms-accent);
+}
+
+.ms-focus-action-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--ms-accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.ms-focus-action-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--ms-text);
+  font-family: var(--ms-font-mono);
+  font-size: 1.1rem;
+  outline: none;
+  line-height: 1.4;
+}
+
+.ms-focus-action-input::placeholder {
+  color: var(--ms-text-faint);
+}
+
+/* Resume Context Banner inside Focus */
+.ms-focus-resume-banner {
+  width: 100%;
+  background: var(--ms-bg-subtle);
+  border: 1px dashed var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  padding: 16px 20px;
+  text-align: left;
+  font-size: 0.9rem;
+  color: var(--ms-text-muted);
+}
+
+.ms-focus-resume-banner strong {
+  color: var(--ms-text);
+}
+
+/* Timer Display */
+.ms-focus-timer-wrap {
+  margin: 12px 0;
+}
+
+.ms-focus-timer {
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 3px;
+  color: var(--ms-text);
+}
+
+.ms-focus-timer-hint {
+  font-size: 0.85rem;
+  color: var(--ms-text-faint);
+  margin-top: 6px;
+}
+
+/* Focus Controls */
+.ms-focus-controls {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+.ms-focus-controls .ms-btn-primary {
+  padding: 14px 32px;
+  font-size: 1rem;
+}
+
+.ms-focus-controls .ms-btn-secondary {
+  padding: 14px 28px;
+  font-size: 1rem;
+}
+
+/* ==========================================================================
+   INBOX / THOUGHTS
+   ========================================================================== */
+.ms-inbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ms-thought-card {
+  background: var(--ms-card-bg);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  padding: 18px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.ms-thought-body {
+  flex: 1;
+}
+
+.ms-thought-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ms-text);
+  margin-bottom: 6px;
+  word-break: break-word;
+}
+
+.ms-thought-time {
+  font-size: 0.8rem;
+  color: var(--ms-text-muted);
+}
+
+.ms-thought-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   PROJECTS VIEW
+   ========================================================================== */
+.ms-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.ms-project-card {
+  background: var(--ms-card-bg);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-md);
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  position: relative;
+}
+
+.ms-project-card:hover {
+  border-color: var(--ms-accent);
+  transform: translateY(-2px);
+}
+
+.ms-project-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ms-text);
+  margin-bottom: 10px;
+}
+
+.ms-project-count {
+  font-size: 0.9rem;
+  color: var(--ms-text-muted);
+}
+
+.ms-project-actions {
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+/* ==========================================================================
+   MODALS & BOTTOM SHEETS
+   ========================================================================== */
+.ms-modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(8, 9, 12, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 24px;
+}
+
+.ms-modal-backdrop.open {
+  display: flex;
+}
+
+.ms-modal {
+  background: var(--ms-card-bg);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-lg);
+  width: 100%;
+  max-width: 560px;
+  padding: 28px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+  animation: msModalScale 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+@keyframes msModalScale {
+  from { opacity: 0; transform: scale(0.96) translateY(8px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.ms-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.ms-modal-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--ms-text);
+}
+
+.ms-modal-close {
+  background: transparent;
+  border: none;
+  color: var(--ms-text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  line-height: 1;
+  border-radius: var(--ms-radius-sm);
+}
+
+.ms-modal-close:hover {
+  color: var(--ms-text);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Form Styles */
+.ms-form-group {
+  margin-bottom: 20px;
+}
+
+.ms-form-label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--ms-text-muted);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.ms-input,
+.ms-select,
+.ms-textarea {
+  width: 100%;
+  background: var(--ms-bg-subtle);
+  border: 1px solid var(--ms-border);
+  border-radius: var(--ms-radius-sm);
+  color: var(--ms-text);
+  font-family: var(--ms-font-mono);
+  font-size: 16px; /* 16px prevents iOS Safari auto-zoom */
+  padding: 12px 14px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.ms-input:focus,
+.ms-select:focus,
+.ms-textarea:focus {
+  border-color: var(--ms-accent);
+}
+
+.ms-textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+.ms-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.ms-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+/* Command Palette */
+.ms-palette-modal {
+  max-width: 600px;
+  padding: 16px;
+}
+
+.ms-palette-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--ms-border);
+  padding: 10px 14px 18px;
+}
+
+.ms-palette-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  color: var(--ms-text);
+  font-family: var(--ms-font-mono);
+  font-size: 16px;
+  outline: none;
+}
+
+.ms-palette-input::placeholder {
+  color: var(--ms-text-faint);
+}
+
+.ms-palette-options {
+  padding: 14px 0 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 340px;
+  overflow-y: auto;
+}
+
+.ms-palette-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-radius: var(--ms-radius-sm);
+  color: var(--ms-text-muted);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  min-height: 44px;
+}
+
+.ms-palette-item:hover,
+.ms-palette-item.active {
+  background: var(--ms-bg-subtle);
+  color: var(--ms-text);
+}
+
+.ms-palette-item.active {
+  border-left: 3px solid var(--ms-accent);
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION (Screens <= 640px)
+   ========================================================================== */
+@media (max-width: 640px) {
+  .ms-app {
+    padding: 16px 14px 110px; /* Safe space for bottom navigation bar */
+  }
+
+  .ms-header {
+    gap: 14px;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+  }
+
+  .ms-header-top {
+    justify-content: space-between;
+  }
+
+  .ms-logo {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+  }
+
+  .ms-header-actions {
+    gap: 8px;
+  }
+
+  .ms-header-actions .ms-icon-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .ms-header-actions .ms-btn-primary {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+
+  /* Fixed Bottom Navigation Dock on Mobile */
+  .ms-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: 1px solid var(--ms-border);
+    background: rgba(14, 15, 20, 0.95);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    padding: 8px 12px max(12px, env(safe-area-inset-bottom));
+    gap: 8px;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.5);
+  }
+
+  .ms-nav-btn {
+    padding: 8px 6px;
+    font-size: 0.82rem;
+    min-height: 44px;
+  }
+
+  .ms-task-card {
+    padding: 16px 14px;
+    gap: 12px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ms-task-card > .ms-task-seq {
+    display: none;
+  }
+
+  .ms-task-body {
+    width: 100%;
+  }
+
+  .ms-task-title {
+    font-size: 1rem;
+  }
+
+  .ms-task-actions {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 6px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--ms-border-subtle);
+  }
+
+  .ms-btn-start,
+  .ms-btn-continue {
+    flex: 1;
+    text-align: center;
+    justify-content: center;
+  }
+
+  /* Focus Screen on Mobile */
+  .ms-focus-container {
+    margin: 12px auto;
+    gap: 24px;
+  }
+
+  .ms-focus-title {
+    font-size: 1.65rem;
+    margin: 8px 0 14px;
+  }
+
+  .ms-focus-timer {
+    font-size: 3.6rem;
+    letter-spacing: 2px;
+  }
+
+  .ms-focus-controls {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ms-focus-controls button {
+    width: 100%;
+    min-height: 48px;
+  }
+
+  /* Bottom-Sheet Mobile Modals */
+  .ms-modal-backdrop {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .ms-modal {
+    border-radius: 20px 20px 0 0;
+    max-height: 85vh;
+    padding: 24px 20px max(24px, env(safe-area-inset-bottom));
+    animation: msSheetSlide 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  @keyframes msSheetSlide {
+    from { transform: translateY(100%); }
+    to { transform: translateY(0); }
+  }
+
+  .ms-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .ms-thought-card {
+    padding: 16px 14px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .ms-thought-actions {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
