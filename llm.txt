@@ -3,6 +3,14 @@
 ## Professional Summary
 Otobong Peter is a software engineer, AI systems expert and researcher. His work focuses on intelligent systems, human-centered design, products and systems engineering, with emphasis on how IT infrastructure can be designed to power adaptive, context-aware applications. He is passionate about building software that bridges gaps in infrastructure and accessibility for businesses and consumers, especially across the Global South.
 
+## Experience
+- Senior Fullstack Software Engineer, Esca Finance (Aug 2026 – Present): cross-border payments, FX, stablecoin on/off-ramps
+- Lead Software Engineer, Fraqtion Finance (Jan 2026 – Jul 2026, part-time): trade financing platform, stablecoin on/off-ramps
+- Senior Software Engineer (Backend & Distributed Systems), LTO Network (Jan 2024 – Nov 2025): relay protocol, Ownables SDK, migration to Base
+- Technical Lead & Co-founder, ABCD Technologies (Feb 2022 – Aug 2023)
+- Software Engineer & Developer Relations, ABCD Technologies (Aug 2021 – Feb 2022)
+- Embedded Software Engineer (Intern), Atopet Automations (Apr 2019 – Dec 2019)
+
 ## Core Expertise Areas
 - Products: Product strategy, user research, agile methodologies, roadmap planning, stakeholder management
 - Distributed Systems: Building scalable, resilient systems architecture
@@ -70,16 +78,16 @@ Otobong Peter is a software engineer, AI systems expert and researcher. His work
 ### Kulawise (2025)
 AI-powered health intelligence platform that puts healthy living on auto-pilot with personalized nutrition recommendations and health tracking. Built with modern web technologies and AI integration.
 
-### Fraqtion Finance (2024)
+### Fraqtion Finance (2026)
 Real-world asset tokenization platform focused on Africa, enabling businesses to tokenize assets on-chain while users participate using stablecoins through seamless dashboard/wallet experiences. Gateway between real-world assets and digital participation.
 
-### RepoLens (2025)
-Fullstack AI-powered tool for analyzing code repositories, helping developers explore project structures and understand complex codebases faster. Features matching requirements to codebases using local ASTs and LLMs.
+### Code Graph View (2025)
+VS Code extension (Open VSX: https://open-vsx.org/extension/otobongfp/code-graph-view) that renders codebases as an interactive call graph. Traces execution paths, shows the blast radius of git changes and pull requests, and exports curated context to AI assistants. Built on the editor's language servers with no indexing; supports 15 languages.
 
 ### Ownables CLI (2023)
 Comprehensive CLI tool for building ownables on the LTO Layer-1 blockchain with easy-to-use commands for creating and managing digital assets.
 
-### Relay Protocol (2023)
+### Relay Protocol (2024)
 Peer-to-peer communication protocol for decentralized messaging with secure, direct communication between nodes and built-in encryption.
 
 ### EQTY Passport (2022)
@@ -111,8 +119,8 @@ Led the Google Developer Student Club at Rivers State University, focusing on de
 - Active in OpenForge community leadership
 
 ## Education & Background
-- M.Sc. in Software Engineering
-- Undergraduate degree with thesis in intelligent systems
+- M.Sc. in Software Engineering, Nile University of Nigeria (2026)
+- B.Tech in Electrical & Electronics Engineering, Rivers State University (2021); thesis on a facial-recognition smart door lock
 - Started technical career in 2019 as hardware intern working with microcontrollers and IoT systems
 - Early interest in blending software with physical systems
 

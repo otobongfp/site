@@ -73,7 +73,7 @@ a:focus {
 }
 
 .sub-heading {
-  font-family: "Roboto", sans-serif;
+  font-family: "IBM Plex Mono", monospace;
   font-size: 1.4rem;
   margin-top: 1.5rem;
   margin-bottom: 1rem;
@@ -627,6 +627,15 @@ body:not(.light-mode) .social-link:hover {
   color: var(--highlight-text);
   padding: 0.2em 0.3em;
   border-radius: 3px;
+}
+
+/* Dark mode: in-text links get a coloured underline instead of a block highlight */
+body:not(.light-mode) .event-description-clean a {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  text-decoration-color: var(--highlight-bg);
+  text-underline-offset: 3px;
 }
 
 .dark-mode-toggle {
@@ -1497,6 +1506,41 @@ body:not(.light-mode) .social-link:hover {
   transform: translateX(-3px);
 }
 
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1rem;
+}
+
+.site-header a {
+  white-space: nowrap;
+}
+
+.site-header .site-logo {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.site-header .site-logo a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.site-header .site-logo img {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #fff;
+  object-fit: cover;
+}
+
 /* Recent Projects Section */
 .recent-projects {
   margin: 1.5rem 0;
@@ -2183,11 +2227,33 @@ body:not(.light-mode) .social-link:hover {
   text-transform: uppercase;
   color: var(--accent-text);
   opacity: 0.9;
+  line-height: 1.7;
   margin: 0 0 1.25rem;
+  overflow: hidden;
+}
+
+/* each item starts with a dot; the list is shifted left and clipped so line-start dots are hidden */
+.bio-eyebrow-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 0.25rem;
+  margin-left: -1.6em;
+}
+
+.bio-eyebrow-list > span {
+  white-space: nowrap;
+}
+
+.bio-eyebrow-list > span::before {
+  content: "·";
+  display: inline-block;
+  width: 1.6em;
+  text-align: center;
 }
 
 .bio-name {
   font-size: 0.95rem;
+  font-weight: 400;
   opacity: 0.6;
   margin: 0 0 0.75rem;
 }
@@ -2209,7 +2275,8 @@ body:not(.light-mode) .social-link:hover {
   line-height: 1.7;
   opacity: 0.85;
   margin: 0 0 1.5rem;
-  max-width: 640px;
+  text-align: justify;
+  hyphens: auto;
 }
 
 .bio-tags {
@@ -2334,6 +2401,32 @@ body:not(.light-mode) .social-link:hover {
 
   .bio-headline {
     font-size: 1.5rem;
+  }
+
+  .bio-eyebrow {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .bio-lead {
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    hyphens: manual;
+  }
+
+  .hide-mobile {
+    display: none;
+  }
+
+
+  .bio-tags {
+    gap: 0.4rem;
+  }
+
+  .bio-tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
   }
 }
 
@@ -2807,5 +2900,24 @@ body:not(.light-mode) .social-link:hover {
   .mode-icon {
     width: 18px;
     height: 18px;
+  }
+}
+
+/* Mobile type scale: one body size (14px) and one label size (12px).
+   Kept last so it overrides earlier per-component mobile sizes. */
+@media (max-width: 768px) {
+  .bio-lead,
+  .event-description-clean,
+  .currently-item-text,
+  .skill-group,
+  .skill-group strong {
+    font-size: 14px;
+  }
+
+  .event-date-clean,
+  .event-category-clean,
+  .section-eyebrow,
+  .currently-item-label {
+    font-size: 12px;
   }
 }
