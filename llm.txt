@@ -88,6 +88,7 @@ Led the Google Developer Student Club at Rivers State University, focusing on de
 - GitHub: https://github.com/otobongfp
 - LinkedIn: https://www.linkedin.com/in/otobongfp
 - Medium: https://medium.com/@otobongpeter
+- freeCodeCamp: https://www.freecodecamp.org/news/author/otobongfp/
 - Website: https://otobongfp.com
 
 ## Key Achievements

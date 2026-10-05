@@ -117,6 +117,16 @@ a:focus {
   padding: 1rem 0 0.5rem;
 }
 
+.blog-hash {
+  color: var(--highlight-bg);
+  font-weight: 600;
+  margin-right: 0.25rem;
+}
+
+.light-mode .blog-hash {
+  color: #0d9488;
+}
+
 .profile-image-wrapper {
   flex-shrink: 0;
 }
