@@ -67,18 +67,6 @@ export const projectsRepo = {
 
   async seedDefaultsIfEmpty() {
     const defaults = ['Personal', 'Work', 'Side Projects', 'Learning & Research', 'Admin / Ops'];
-    const existing = await db.projects.toArray();
-    
-    // Clean up legacy unused projects (Mindshare, Esca, Kulawise, 1024, etc.) if they have no tasks
-    const legacyNames = new Set(['mindshare', 'esca', 'kulawise', '1024', 'ideas', 'deep work']);
-    for (const p of existing) {
-      if (legacyNames.has(p.name.toLowerCase())) {
-        const taskCount = await db.tasks.where('projectId').equals(p.id).count();
-        if (taskCount === 0) {
-          await db.projects.delete(p.id);
-        }
-      }
-    }
 
     const currentProjects = await db.projects.toArray();
     const existingNames = new Set(currentProjects.map(p => p.name.toLowerCase()));

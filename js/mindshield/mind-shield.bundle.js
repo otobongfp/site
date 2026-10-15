@@ -89,18 +89,6 @@
 
     async seedDefaultsIfEmpty() {
       const defaults = ['Personal', 'Work', 'Side Projects', 'Learning & Research', 'Admin / Ops'];
-      const existing = await db.projects.toArray();
-      
-      // Clean up legacy unused projects (Mindshare, Esca, Kulawise, 1024, etc.) if they have no tasks
-      const legacyNames = new Set(['mindshare', 'esca', 'kulawise', '1024', 'ideas', 'deep work']);
-      for (const p of existing) {
-        if (legacyNames.has(p.name.toLowerCase())) {
-          const taskCount = await db.tasks.where('projectId').equals(p.id).count();
-          if (taskCount === 0) {
-            await db.projects.delete(p.id);
-          }
-        }
-      }
 
       const currentProjects = await db.projects.toArray();
       const existingNames = new Set(currentProjects.map(p => p.name.toLowerCase()));
@@ -727,11 +715,11 @@
 
     close() {
       if (this.dataChannel) {
-        try { this.dataChannel.close(); } catch (e) {}
+        try { this.dataChannel.close(); } catch (e) { }
         this.dataChannel = null;
       }
       if (this.peerConnection) {
-        try { this.peerConnection.close(); } catch (e) {}
+        try { this.peerConnection.close(); } catch (e) { }
         this.peerConnection = null;
       }
     }
@@ -932,10 +920,10 @@
           <div class="ms-task-actions">
             <button class="ms-icon-btn ms-btn-seq-move" data-action="move-up" data-id="${task.id}" title="Move Up in sequence">↑</button>
             <button class="ms-icon-btn ms-btn-seq-move" data-action="move-down" data-id="${task.id}" title="Move Down in sequence">↓</button>
-            ${isActive 
-              ? `<button class="ms-btn-continue" data-action="open-focus" data-id="${task.id}">Continue</button>`
-              : `<button class="ms-btn-start" data-action="start-task" data-id="${task.id}">Start</button>`
-            }
+            ${isActive
+          ? `<button class="ms-btn-continue" data-action="open-focus" data-id="${task.id}">Continue</button>`
+          : `<button class="ms-btn-start" data-action="start-task" data-id="${task.id}">Start</button>`
+        }
             <button class="ms-icon-btn" data-action="edit-task" data-id="${task.id}" title="Edit Task"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg></button>
           </div>
         </div>
@@ -1258,8 +1246,8 @@
       container.innerHTML = `
         <div class="ms-projects-grid">
           ${projects.map(p => {
-            const taskCount = counts[p.id] || 0;
-            return `
+        const taskCount = counts[p.id] || 0;
+        return `
               <div class="ms-project-card" data-project-id="${p.id}">
                 <div class="ms-project-name">${this.escapeHtml(p.name)}</div>
                 <div class="ms-project-count">${taskCount} active task${taskCount === 1 ? '' : 's'}</div>
@@ -1273,7 +1261,7 @@
                 </div>
               </div>
             `;
-          }).join('')}
+      }).join('')}
         </div>
       `;
 
