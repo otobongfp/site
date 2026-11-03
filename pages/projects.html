@@ -88,6 +88,11 @@
                         />
                         <h3 class="event-title-clean">Code Graph View</h3>
                       </div>
+                      <span
+                        id="codeGraphDownloads"
+                        class="event-venue-clean"
+                        hidden
+                      ></span>
                     </div>
                     <p class="event-description-clean">
                       A VS Code extension that turns codebases into an
@@ -514,6 +519,31 @@
         }
         updateModeIcon(isLight);
       });
+    </script>
+
+    <!-- Code Graph View download count -->
+    <script>
+      // Round down so the "+" stays accurate, e.g. 1975 -> "1.9k+"
+      function formatDownloads(count) {
+        if (count >= 1000000) {
+          return Math.floor(count / 100000) / 10 + "M+";
+        }
+        if (count >= 1000) {
+          return Math.floor(count / 100) / 10 + "k+";
+        }
+        return String(count);
+      }
+
+      fetch("https://open-vsx.org/api/otobongfp/code-graph-view")
+        .then((res) => res.json())
+        .then((data) => {
+          const badge = document.getElementById("codeGraphDownloads");
+          if (badge && typeof data.downloadCount === "number") {
+            badge.textContent = formatDownloads(data.downloadCount) + " downloads";
+            badge.hidden = false;
+          }
+        })
+        .catch(() => {});
     </script>
 
     <!-- Tab Functionality -->
